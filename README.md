@@ -1,1 +1,1 @@
-# OntoMarisma
+# ROMA: Risk Ontology for MARISMA
