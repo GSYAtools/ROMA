@@ -1,0 +1,797 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/lhc/ontologies/2023/3/untitled-ontology-34/"
+     xml:base="http://www.semanticweb.org/lhc/ontologies/2023/3/untitled-ontology-34/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://gsya.esi.uclm.es/roma"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#hasAsset -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasAsset">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#TypeOfAsset"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#Asset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#hasCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasCharacteristic">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#Control"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#Characteristic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#hasControl -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasControl">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#ControlObjetive"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#Control"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#hasControlObjetive -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasControlObjetive">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#Domain"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#ControlObjetive"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#hasControlType -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasControlType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#Characteristic"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#ControlType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#hasDegradation -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasDegradation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#Percentage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#hasDimension -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasDimension">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#TAD"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#Dimension"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#hasOccurence -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasOccurence">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#Percentage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#hasOperationalCapability -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasOperationalCapability">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#Characteristic"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#OperationalCapability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#hasSecurityConcept -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasSecurityConcept">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#Characteristic"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#SecurityConcept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#hasSecurityDomain -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasSecurityDomain">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#Characteristic"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#SecurityDomain"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#hasSecurityProperty -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasSecurityProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#Characteristic"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#SecurityProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#hasSubcontrol -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasSubcontrol">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#Control"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#Subcontrol"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#hasThreat -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasThreat">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#TypeOfThreat"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#Threat"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#hasTypeOfAsset -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasTypeOfAsset">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#TAD"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#TypeOfAsset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#hasTypeOfThreat -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasTypeOfThreat">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#TAD"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#TypeOfThreat"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#mitigates -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#mitigates">
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#Control"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#TypeOfThreat"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#assetFamily -->
+
+    <owl:DatatypeProperty rdf:about="https://gsya.esi.uclm.es/roma#assetFamily">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#capability -->
+
+    <owl:DatatypeProperty rdf:about="https://gsya.esi.uclm.es/roma#capability">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#concept -->
+
+    <owl:DatatypeProperty rdf:about="https://gsya.esi.uclm.es/roma#concept">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#coverage -->
+
+    <owl:DatatypeProperty rdf:about="https://gsya.esi.uclm.es/roma#coverage">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#dimension -->
+
+    <owl:DatatypeProperty rdf:about="https://gsya.esi.uclm.es/roma#dimension">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#domain -->
+
+    <owl:DatatypeProperty rdf:about="https://gsya.esi.uclm.es/roma#domain">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#id -->
+
+    <owl:DatatypeProperty rdf:about="https://gsya.esi.uclm.es/roma#id">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#name -->
+
+    <owl:DatatypeProperty rdf:about="https://gsya.esi.uclm.es/roma#name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#property -->
+
+    <owl:DatatypeProperty rdf:about="https://gsya.esi.uclm.es/roma#property">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#threatFamily -->
+
+    <owl:DatatypeProperty rdf:about="https://gsya.esi.uclm.es/roma#threatFamily">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#type -->
+
+    <owl:DatatypeProperty rdf:about="https://gsya.esi.uclm.es/roma#type">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#value -->
+
+    <owl:DatatypeProperty rdf:about="https://gsya.esi.uclm.es/roma#value">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#Asset -->
+
+    <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#Asset">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#value"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#Characteristic -->
+
+    <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#Characteristic">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasControlType"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#ControlType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasOperationalCapability"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#OperationalCapability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasSecurityConcept"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#SecurityConcept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasSecurityDomain"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#SecurityDomain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasSecurityProperty"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#SecurityProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#id"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#Control -->
+
+    <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#Control">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#Characteristic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasSubcontrol"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#Subcontrol"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#TypeOfThreat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#coverage"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#ControlObjetive -->
+
+    <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#ControlObjetive">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasControl"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#Control"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#ControlType -->
+
+    <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#ControlType">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#type"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#Dimension -->
+
+    <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#Dimension">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasDegradation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://gsya.esi.uclm.es/roma#Percentage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#dimension"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#Domain -->
+
+    <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#Domain">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasControlObjetive"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#ControlObjetive"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#FamilyOfAsset -->
+
+    <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#FamilyOfAsset">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#assetFamily"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#FamilyOfThreat -->
+
+    <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#FamilyOfThreat">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#threatFamily"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#OperationalCapability -->
+
+    <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#OperationalCapability">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#capability"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#Percentage -->
+
+    <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#Percentage">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://gsya.esi.uclm.es/roma#HighPercentage"/>
+                    <rdf:Description rdf:about="https://gsya.esi.uclm.es/roma#LowPercentage"/>
+                    <rdf:Description rdf:about="https://gsya.esi.uclm.es/roma#MediumPercentage"/>
+                    <rdf:Description rdf:about="https://gsya.esi.uclm.es/roma#VeryHighPercentage"/>
+                    <rdf:Description rdf:about="https://gsya.esi.uclm.es/roma#VeryLowPercentage"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#SecurityConcept -->
+
+    <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#SecurityConcept">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#concept"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#SecurityDomain -->
+
+    <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#SecurityDomain">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#domain"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#SecurityProperty -->
+
+    <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#SecurityProperty">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#property"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#Subcontrol -->
+
+    <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#Subcontrol">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#coverage"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#TAD -->
+
+    <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#TAD">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasDimension"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#Dimension"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasTypeOfAsset"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#TypeOfAsset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasTypeOfThreat"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#TypeOfThreat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasDegradation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://gsya.esi.uclm.es/roma#Percentage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasOccurence"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://gsya.esi.uclm.es/roma#Percentage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#Threat -->
+
+    <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#Threat">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasOccurence"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://gsya.esi.uclm.es/roma#Percentage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#TypeOfAsset -->
+
+    <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#TypeOfAsset">
+        <rdfs:subClassOf rdf:resource="https://gsya.esi.uclm.es/roma#FamilyOfAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasAsset"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://gsya.esi.uclm.es/roma#Asset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#type"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#TypeOfThreat -->
+
+    <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#TypeOfThreat">
+        <rdfs:subClassOf rdf:resource="https://gsya.esi.uclm.es/roma#FamilyOfThreat"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasThreat"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://gsya.esi.uclm.es/roma#Threat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#type"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#HighPercentage -->
+
+    <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/roma#HighPercentage">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/roma#Percentage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#LowPercentage -->
+
+    <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/roma#LowPercentage">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/roma#Percentage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#MediumPercentage -->
+
+    <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/roma#MediumPercentage">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/roma#Percentage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#VeryHighPercentage -->
+
+    <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/roma#VeryHighPercentage">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/roma#Percentage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#VeryLowPercentage -->
+
+    <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/roma#VeryLowPercentage">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/roma#Percentage"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
