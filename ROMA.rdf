@@ -34,19 +34,6 @@
     
 
 
-    <!-- https://gsya.esi.uclm.es/roma#hasCharacteristic -->
-
-    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasCharacteristic">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#Control"/>
-        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#Characteristic"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://gsya.esi.uclm.es/roma#hasControl -->
 
     <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasControl">
@@ -77,7 +64,7 @@
 
     <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasControlType">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#Characteristic"/>
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#SecurityCharacteristic"/>
         <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#ControlType"/>
     </owl:ObjectProperty>
     
@@ -115,8 +102,64 @@
 
     <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasOperationalCapability">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#Characteristic"/>
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#SecurityCharacteristic"/>
         <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#OperationalCapability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#hasSControl -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasSControl">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#SustainabilitySecurity"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#SControl"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#hasSLabel -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasSLabel">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://gsya.esi.uclm.es/roma#SustainabilityLabel"/>
+                    <rdf:Description rdf:about="https://gsya.esi.uclm.es/roma#SustainabilitySecurity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#SLabel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#hasSProduct -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasSProduct">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#SustainabilityLabel"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#SProduct"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#hasSecurityCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasSecurityCharacteristic">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#Control"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#SecurityCharacteristic"/>
     </owl:ObjectProperty>
     
 
@@ -125,7 +168,7 @@
 
     <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasSecurityConcept">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#Characteristic"/>
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#SecurityCharacteristic"/>
         <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#SecurityConcept"/>
     </owl:ObjectProperty>
     
@@ -135,7 +178,7 @@
 
     <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasSecurityDomain">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#Characteristic"/>
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#SecurityCharacteristic"/>
         <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#SecurityDomain"/>
     </owl:ObjectProperty>
     
@@ -145,7 +188,7 @@
 
     <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasSecurityProperty">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#Characteristic"/>
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#SecurityCharacteristic"/>
         <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#SecurityProperty"/>
     </owl:ObjectProperty>
     
@@ -160,6 +203,30 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#Control"/>
         <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#Subcontrol"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#hasSustainabilityLabel -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasSustainabilityLabel">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#TypeOfAsset"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#SustainabilityLabel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#hasSustainabilitySecurity -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/roma#hasSustainabilitySecurity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/roma#Control"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/roma#SustainabilitySecurity"/>
     </owl:ObjectProperty>
     
 
@@ -356,63 +423,25 @@
     
 
 
-    <!-- https://gsya.esi.uclm.es/roma#Characteristic -->
-
-    <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#Characteristic">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasControlType"/>
-                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#ControlType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasOperationalCapability"/>
-                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#OperationalCapability"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasSecurityConcept"/>
-                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#SecurityConcept"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasSecurityDomain"/>
-                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#SecurityDomain"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasSecurityProperty"/>
-                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#SecurityProperty"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#id"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- https://gsya.esi.uclm.es/roma#Control -->
 
     <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#Control">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#Characteristic"/>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasSecurityCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#SecurityCharacteristic"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasSubcontrol"/>
                 <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#Subcontrol"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasSustainabilitySecurity"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#SustainabilitySecurity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -574,6 +603,103 @@
     
 
 
+    <!-- https://gsya.esi.uclm.es/roma#SControl -->
+
+    <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#SControl">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://gsya.esi.uclm.es/roma#Adoption"/>
+                    <rdf:Description rdf:about="https://gsya.esi.uclm.es/roma#Efficiency"/>
+                    <rdf:Description rdf:about="https://gsya.esi.uclm.es/roma#Maintenance"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#SLabel -->
+
+    <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#SLabel">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://gsya.esi.uclm.es/roma#ASustinabilityLabel"/>
+                    <rdf:Description rdf:about="https://gsya.esi.uclm.es/roma#BSustainabilityLabel"/>
+                    <rdf:Description rdf:about="https://gsya.esi.uclm.es/roma#CSustainabilityLabel"/>
+                    <rdf:Description rdf:about="https://gsya.esi.uclm.es/roma#DSustainabilityLabel"/>
+                    <rdf:Description rdf:about="https://gsya.esi.uclm.es/roma#ESustainabilityLabel"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#SProduct -->
+
+    <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#SProduct">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://gsya.esi.uclm.es/roma#Manufacture"/>
+                    <rdf:Description rdf:about="https://gsya.esi.uclm.es/roma#Packaging"/>
+                    <rdf:Description rdf:about="https://gsya.esi.uclm.es/roma#RawMaterial"/>
+                    <rdf:Description rdf:about="https://gsya.esi.uclm.es/roma#SpareParts"/>
+                    <rdf:Description rdf:about="https://gsya.esi.uclm.es/roma#Transport"/>
+                    <rdf:Description rdf:about="https://gsya.esi.uclm.es/roma#Usage"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#SecurityCharacteristic -->
+
+    <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#SecurityCharacteristic">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasControlType"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#ControlType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasOperationalCapability"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#OperationalCapability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasSecurityConcept"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#SecurityConcept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasSecurityDomain"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#SecurityDomain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasSecurityProperty"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#SecurityProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#id"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- https://gsya.esi.uclm.es/roma#SecurityConcept -->
 
     <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#SecurityConcept">
@@ -631,6 +757,44 @@
                 <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#name"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#SustainabilityLabel -->
+
+    <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#SustainabilityLabel">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasSLabel"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#SLabel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasSProduct"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#SProduct"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#SustainabilitySecurity -->
+
+    <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#SustainabilitySecurity">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasSControl"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#SControl"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasSLabel"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#SLabel"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -703,6 +867,12 @@
         <rdfs:subClassOf rdf:resource="https://gsya.esi.uclm.es/roma#FamilyOfAsset"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasSustainabilityLabel"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#SustainabilityLabel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasAsset"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="https://gsya.esi.uclm.es/roma#Asset"/>
@@ -752,6 +922,62 @@
     
 
 
+    <!-- https://gsya.esi.uclm.es/roma#ASustinabilityLabel -->
+
+    <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/roma#ASustinabilityLabel">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/roma#SLabel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#Adoption -->
+
+    <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/roma#Adoption">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/roma#SControl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#BSustainabilityLabel -->
+
+    <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/roma#BSustainabilityLabel">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/roma#SLabel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#CSustainabilityLabel -->
+
+    <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/roma#CSustainabilityLabel">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/roma#SLabel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#DSustainabilityLabel -->
+
+    <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/roma#DSustainabilityLabel">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/roma#SLabel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#ESustainabilityLabel -->
+
+    <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/roma#ESustainabilityLabel">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/roma#SLabel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#Efficiency -->
+
+    <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/roma#Efficiency">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/roma#SControl"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://gsya.esi.uclm.es/roma#HighPercentage -->
 
     <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/roma#HighPercentage">
@@ -768,10 +994,66 @@
     
 
 
+    <!-- https://gsya.esi.uclm.es/roma#Maintenance -->
+
+    <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/roma#Maintenance">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/roma#SControl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#Manufacture -->
+
+    <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/roma#Manufacture">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/roma#SProduct"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://gsya.esi.uclm.es/roma#MediumPercentage -->
 
     <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/roma#MediumPercentage">
         <rdf:type rdf:resource="https://gsya.esi.uclm.es/roma#Percentage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#Packaging -->
+
+    <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/roma#Packaging">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/roma#SProduct"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#RawMaterial -->
+
+    <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/roma#RawMaterial">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/roma#SProduct"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#SpareParts -->
+
+    <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/roma#SpareParts">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/roma#SProduct"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#Transport -->
+
+    <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/roma#Transport">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/roma#SProduct"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/roma#Usage -->
+
+    <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/roma#Usage">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/roma#SProduct"/>
     </owl:NamedIndividual>
     
 
