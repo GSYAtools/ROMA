@@ -1,0 +1,35 @@
+@prefix ex: <http://example.org/mitre#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# --- Severity Levels ---
+ex:LowSeverity a ex:SeverityLevel .
+ex:MediumSeverity a ex:SeverityLevel .
+ex:HighSeverity a ex:SeverityLevel .
+ex:CriticalSeverity a ex:SeverityLevel .
+
+# --- Example Platform ---
+ex:Windows10 a ex:Platform ;
+    ex:hasVendor "Microsoft" ;
+    ex:hasProduct "Windows" ;
+    ex:hasVersion "10" .
+
+# --- Example Vulnerability ---
+ex:CVE_2024_12345 a ex:Vulnerability ;
+    ex:hasID "CVE-2024-12345" ;
+    ex:hasName "SQL Injection in XYZ App" ;
+    ex:hasDescription "Improper input validation allows attackers to execute arbitrary SQL commands." ;
+    ex:hasSeverityLevel ex:HighSeverity ;
+    ex:affectsPlatform ex:Windows10 ;
+    ex:listedIn ex:CVE .
+
+# --- Example Weakness ---
+ex:CWE_89 a ex:Weakness ;
+    ex:hasID "CWE-89" ;
+    ex:hasName "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')" ;
+    ex:causesVulnerability ex:CVE_2024_12345 .
+
+# --- Example Attack Pattern ---
+ex:CAPEC_66 a ex:AttackPattern ;
+    ex:hasID "CAPEC-66" ;
+    ex:hasName "SQL Injection" ;
+    ex:relatedToWeakness ex:CWE_89 .
