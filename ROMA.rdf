@@ -653,23 +653,21 @@
     <owl:Class rdf:about="https://gsya.esi.uclm.es/roma#Risk">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasAsset"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="https://gsya.esi.uclm.es/roma#Asset"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasControl"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="https://gsya.esi.uclm.es/roma#Control"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#Control"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasDimension"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/roma#Dimension"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/roma#hasAsset"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="https://gsya.esi.uclm.es/roma#Dimension"/>
+                <owl:onClass rdf:resource="https://gsya.esi.uclm.es/roma#Asset"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
