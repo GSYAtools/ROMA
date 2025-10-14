@@ -1,0 +1,768 @@
+@prefix : <http://www.semanticweb.org/lhc/ontologies/2023/3/untitled-ontology-34/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/lhc/ontologies/2023/3/untitled-ontology-34/> .
+
+<https://gsya.esi.uclm.es/roma> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://gsya.esi.uclm.es/roma#hasAsset
+:hasAsset rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdf:type owl:InverseFunctionalProperty ,
+                   owl:AsymmetricProperty ,
+                   owl:IrreflexiveProperty ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :Asset
+                                      :Risk
+                                      :TypeOfAsset
+                                    )
+                      ] ;
+          rdfs:range :Asset .
+
+
+###  https://gsya.esi.uclm.es/roma#hasControl
+:hasControl rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdf:type owl:InverseFunctionalProperty ,
+                     owl:AsymmetricProperty ,
+                     owl:IrreflexiveProperty ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( :ControlObjetive
+                                        :Risk
+                                      )
+                        ] ;
+            rdfs:range :Control .
+
+
+###  https://gsya.esi.uclm.es/roma#hasControlObjetive
+:hasControlObjetive rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdf:type owl:InverseFunctionalProperty ,
+                             owl:AsymmetricProperty ,
+                             owl:IrreflexiveProperty ;
+                    rdfs:domain :Domain ;
+                    rdfs:range :ControlObjetive .
+
+
+###  https://gsya.esi.uclm.es/roma#hasControlType
+:hasControlType rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:domain :SecurityCharacteristic ;
+                rdfs:range :ControlType .
+
+
+###  https://gsya.esi.uclm.es/roma#hasDegradation
+:hasDegradation rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:range :Percentage .
+
+
+###  https://gsya.esi.uclm.es/roma#hasDimension
+:hasDimension rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( :Risk
+                                          :TAD
+                                        )
+                          ] ;
+              rdfs:range :Dimension .
+
+
+###  https://gsya.esi.uclm.es/roma#hasOccurence
+:hasOccurence rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:range :Percentage .
+
+
+###  https://gsya.esi.uclm.es/roma#hasOperationalCapability
+:hasOperationalCapability rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf owl:topObjectProperty ;
+                          rdfs:domain :SecurityCharacteristic ;
+                          rdfs:range :OperationalCapability .
+
+
+###  https://gsya.esi.uclm.es/roma#hasProductLifecyclePhase
+:hasProductLifecyclePhase rdf:type owl:ObjectProperty ,
+                                   owl:InverseFunctionalProperty ,
+                                   owl:AsymmetricProperty ,
+                                   owl:IrreflexiveProperty ;
+                          rdfs:domain :SustainabilityLabel ;
+                          rdfs:range :ProductLifecyclePhase .
+
+
+###  https://gsya.esi.uclm.es/roma#hasRiskLevel
+:hasRiskLevel rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:range :Percentage .
+
+
+###  https://gsya.esi.uclm.es/roma#hasSecurityCharacteristic
+:hasSecurityCharacteristic rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf owl:topObjectProperty ;
+                           rdf:type owl:InverseFunctionalProperty ,
+                                    owl:AsymmetricProperty ,
+                                    owl:IrreflexiveProperty ;
+                           rdfs:domain :Control ;
+                           rdfs:range :SecurityCharacteristic .
+
+
+###  https://gsya.esi.uclm.es/roma#hasSecurityConcept
+:hasSecurityConcept rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:domain :SecurityCharacteristic ;
+                    rdfs:range :SecurityConcept .
+
+
+###  https://gsya.esi.uclm.es/roma#hasSecurityDomain
+:hasSecurityDomain rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain :SecurityCharacteristic ;
+                   rdfs:range :SecurityDomain .
+
+
+###  https://gsya.esi.uclm.es/roma#hasSecurityProperty
+:hasSecurityProperty rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty ;
+                     rdfs:domain :SecurityCharacteristic ;
+                     rdfs:range :SecurityProperty .
+
+
+###  https://gsya.esi.uclm.es/roma#hasSubcontrol
+:hasSubcontrol rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdf:type owl:InverseFunctionalProperty ,
+                        owl:AsymmetricProperty ,
+                        owl:IrreflexiveProperty ;
+               rdfs:domain :Control ;
+               rdfs:range :Subcontrol .
+
+
+###  https://gsya.esi.uclm.es/roma#hasSustainabilityAspect
+:hasSustainabilityAspect rdf:type owl:ObjectProperty ,
+                                  owl:InverseFunctionalProperty ,
+                                  owl:AsymmetricProperty ,
+                                  owl:IrreflexiveProperty ;
+                         rdfs:domain :SustainabilitySecurity ;
+                         rdfs:range :SustainabilityAspect .
+
+
+###  https://gsya.esi.uclm.es/roma#hasSustainabilityLabel
+:hasSustainabilityLabel rdf:type owl:ObjectProperty ,
+                                 owl:InverseFunctionalProperty ,
+                                 owl:AsymmetricProperty ,
+                                 owl:IrreflexiveProperty ;
+                        rdfs:domain :TypeOfAsset ;
+                        rdfs:range :SustainabilityLabel .
+
+
+###  https://gsya.esi.uclm.es/roma#hasSustainabilityRating
+:hasSustainabilityRating rdf:type owl:ObjectProperty ,
+                                  owl:InverseFunctionalProperty ,
+                                  owl:AsymmetricProperty ,
+                                  owl:IrreflexiveProperty ;
+                         rdfs:domain [ rdf:type owl:Class ;
+                                       owl:unionOf ( :SustainabilityLabel
+                                                     :SustainabilitySecurity
+                                                   )
+                                     ] ;
+                         rdfs:range :SustainabilityRating .
+
+
+###  https://gsya.esi.uclm.es/roma#hasSustainabilitySecurity
+:hasSustainabilitySecurity rdf:type owl:ObjectProperty ,
+                                    owl:InverseFunctionalProperty ,
+                                    owl:AsymmetricProperty ,
+                                    owl:IrreflexiveProperty ;
+                           rdfs:domain :Control ;
+                           rdfs:range :SustainabilitySecurity .
+
+
+###  https://gsya.esi.uclm.es/roma#hasThreat
+:hasThreat rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdf:type owl:InverseFunctionalProperty ,
+                    owl:AsymmetricProperty ,
+                    owl:IrreflexiveProperty ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :Risk
+                                       :TypeOfThreat
+                                     )
+                       ] ;
+           rdfs:range :Threat .
+
+
+###  https://gsya.esi.uclm.es/roma#hasTypeOfAsset
+:hasTypeOfAsset rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:domain :TAD ;
+                rdfs:range :TypeOfAsset .
+
+
+###  https://gsya.esi.uclm.es/roma#hasTypeOfThreat
+:hasTypeOfThreat rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 rdfs:domain :TAD ;
+                 rdfs:range :TypeOfThreat .
+
+
+###  https://gsya.esi.uclm.es/roma#mitigates
+:mitigates rdf:type owl:ObjectProperty ;
+           rdfs:domain :Control ;
+           rdfs:range :TypeOfThreat .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://gsya.esi.uclm.es/roma#assetFamily
+:assetFamily rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:range xsd:string .
+
+
+###  https://gsya.esi.uclm.es/roma#capability
+:capability rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:range xsd:string .
+
+
+###  https://gsya.esi.uclm.es/roma#concept
+:concept rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty ;
+         rdfs:range xsd:string .
+
+
+###  https://gsya.esi.uclm.es/roma#coverage
+:coverage rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:integer .
+
+
+###  https://gsya.esi.uclm.es/roma#dimension
+:dimension rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:range xsd:string .
+
+
+###  https://gsya.esi.uclm.es/roma#domain
+:domain rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty ;
+        rdfs:range xsd:string .
+
+
+###  https://gsya.esi.uclm.es/roma#id
+:id rdf:type owl:DatatypeProperty ;
+    rdfs:subPropertyOf owl:topDataProperty ;
+    rdfs:range xsd:integer .
+
+
+###  https://gsya.esi.uclm.es/roma#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty ;
+      rdfs:range xsd:string .
+
+
+###  https://gsya.esi.uclm.es/roma#property
+:property rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:range xsd:string .
+
+
+###  https://gsya.esi.uclm.es/roma#threatFamily
+:threatFamily rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:range xsd:string .
+
+
+###  https://gsya.esi.uclm.es/roma#type
+:type rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty ;
+      rdfs:range xsd:string .
+
+
+###  https://gsya.esi.uclm.es/roma#value
+:value rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf owl:topDataProperty ;
+       rdfs:range xsd:integer .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://gsya.esi.uclm.es/roma#Asset
+:Asset rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasAsset ;
+                         owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                         owl:onClass :Asset
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :name ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:string
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :value ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:integer
+                       ] .
+
+
+###  https://gsya.esi.uclm.es/roma#Control
+:Control rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasSecurityCharacteristic ;
+                           owl:someValuesFrom :SecurityCharacteristic
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasSubcontrol ;
+                           owl:someValuesFrom :Subcontrol
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasSustainabilitySecurity ;
+                           owl:someValuesFrom :SustainabilitySecurity
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :mitigates ;
+                           owl:someValuesFrom :TypeOfThreat
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :coverage ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:integer
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :name ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] .
+
+
+###  https://gsya.esi.uclm.es/roma#ControlObjetive
+:ControlObjetive rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasControl ;
+                                   owl:someValuesFrom :Control
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :name ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:string
+                                 ] .
+
+
+###  https://gsya.esi.uclm.es/roma#ControlType
+:ControlType rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :type ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] .
+
+
+###  https://gsya.esi.uclm.es/roma#Dimension
+:Dimension rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasDegradation ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :Percentage
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :dimension ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:string
+                           ] .
+
+
+###  https://gsya.esi.uclm.es/roma#Domain
+:Domain rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasControlObjetive ;
+                          owl:someValuesFrom :ControlObjetive
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :name ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:string
+                        ] .
+
+
+###  https://gsya.esi.uclm.es/roma#FamilyOfAsset
+:FamilyOfAsset rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty :assetFamily ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:string
+                               ] .
+
+
+###  https://gsya.esi.uclm.es/roma#FamilyOfThreat
+:FamilyOfThreat rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty :threatFamily ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:string
+                                ] .
+
+
+###  https://gsya.esi.uclm.es/roma#OperationalCapability
+:OperationalCapability rdf:type owl:Class ;
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty :capability ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:string
+                                       ] .
+
+
+###  https://gsya.esi.uclm.es/roma#Percentage
+:Percentage rdf:type owl:Class ;
+            owl:equivalentClass [ rdf:type owl:Class ;
+                                  owl:oneOf ( :HighPercentage
+                                              :LowPercentage
+                                              :MediumPercentage
+                                              :VeryHighPercentage
+                                              :VeryLowPercentage
+                                            )
+                                ] .
+
+
+###  https://gsya.esi.uclm.es/roma#ProductLifecyclePhase
+:ProductLifecyclePhase rdf:type owl:Class ;
+                       owl:equivalentClass [ rdf:type owl:Class ;
+                                             owl:oneOf ( :Manufacture
+                                                         :Packaging
+                                                         :RawMaterial
+                                                         :SpareParts
+                                                         :Transport
+                                                         :Usage
+                                                       )
+                                           ] .
+
+
+###  https://gsya.esi.uclm.es/roma#Risk
+:Risk rdf:type owl:Class ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasControl ;
+                        owl:someValuesFrom :Control
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasDimension ;
+                        owl:someValuesFrom :Dimension
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasAsset ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass :Asset
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasRiskLevel ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass :Percentage
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasThreat ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass :Threat
+                      ] .
+
+
+###  https://gsya.esi.uclm.es/roma#SecurityCharacteristic
+:SecurityCharacteristic rdf:type owl:Class ;
+                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasControlType ;
+                                          owl:someValuesFrom :ControlType
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasOperationalCapability ;
+                                          owl:someValuesFrom :OperationalCapability
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasSecurityConcept ;
+                                          owl:someValuesFrom :SecurityConcept
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasSecurityDomain ;
+                                          owl:someValuesFrom :SecurityDomain
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasSecurityProperty ;
+                                          owl:someValuesFrom :SecurityProperty
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :id ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange xsd:integer
+                                        ] .
+
+
+###  https://gsya.esi.uclm.es/roma#SecurityConcept
+:SecurityConcept rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty :concept ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:string
+                                 ] .
+
+
+###  https://gsya.esi.uclm.es/roma#SecurityDomain
+:SecurityDomain rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty :domain ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:string
+                                ] .
+
+
+###  https://gsya.esi.uclm.es/roma#SecurityProperty
+:SecurityProperty rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty :property ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:string
+                                  ] .
+
+
+###  https://gsya.esi.uclm.es/roma#Subcontrol
+:Subcontrol rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty :coverage ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:integer
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :name ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:string
+                            ] .
+
+
+###  https://gsya.esi.uclm.es/roma#SustainabilityAspect
+:SustainabilityAspect rdf:type owl:Class ;
+                      owl:equivalentClass [ rdf:type owl:Class ;
+                                            owl:oneOf ( :Adoption
+                                                        :Efficiency
+                                                        :Maintenance
+                                                      )
+                                          ] .
+
+
+###  https://gsya.esi.uclm.es/roma#SustainabilityLabel
+:SustainabilityLabel rdf:type owl:Class ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasSustainabilityRating ;
+                                       owl:someValuesFrom :SustainabilityRating
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasProductLifecyclePhase ;
+                                       owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                       owl:onClass :ProductLifecyclePhase
+                                     ] .
+
+
+###  https://gsya.esi.uclm.es/roma#SustainabilityRating
+:SustainabilityRating rdf:type owl:Class ;
+                      owl:equivalentClass [ rdf:type owl:Class ;
+                                            owl:oneOf ( :ASustinability
+                                                        :BSustainability
+                                                        :CSustainability
+                                                        :DSustainability
+                                                        :ESustainability
+                                                      )
+                                          ] .
+
+
+###  https://gsya.esi.uclm.es/roma#SustainabilitySecurity
+:SustainabilitySecurity rdf:type owl:Class ;
+                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasSustainabilityRating ;
+                                          owl:someValuesFrom :SustainabilityRating
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasSustainabilityAspect ;
+                                          owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                          owl:onClass :SustainabilityAspect
+                                        ] .
+
+
+###  https://gsya.esi.uclm.es/roma#TAD
+:TAD rdf:type owl:Class ;
+     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                       owl:onProperty :hasDimension ;
+                       owl:someValuesFrom :Dimension
+                     ] ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :hasTypeOfAsset ;
+                       owl:someValuesFrom :TypeOfAsset
+                     ] ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :hasTypeOfThreat ;
+                       owl:someValuesFrom :TypeOfThreat
+                     ] ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :hasDegradation ;
+                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                       owl:onClass :Percentage
+                     ] ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :hasOccurence ;
+                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                       owl:onClass :Percentage
+                     ] .
+
+
+###  https://gsya.esi.uclm.es/roma#Threat
+:Threat rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasOccurence ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Percentage
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :name ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:string
+                        ] .
+
+
+###  https://gsya.esi.uclm.es/roma#TypeOfAsset
+:TypeOfAsset rdf:type owl:Class ;
+             rdfs:subClassOf :FamilyOfAsset ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasSustainabilityLabel ;
+                               owl:someValuesFrom :SustainabilityLabel
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasAsset ;
+                               owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                               owl:onClass :Asset
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :type ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] .
+
+
+###  https://gsya.esi.uclm.es/roma#TypeOfThreat
+:TypeOfThreat rdf:type owl:Class ;
+              rdfs:subClassOf :FamilyOfThreat ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasThreat ;
+                                owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                owl:onClass :Threat
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :type ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:string
+                              ] .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://gsya.esi.uclm.es/roma#ASustinability
+:ASustinability rdf:type owl:NamedIndividual ,
+                         :SustainabilityRating .
+
+
+###  https://gsya.esi.uclm.es/roma#Adoption
+:Adoption rdf:type owl:NamedIndividual ,
+                   :SustainabilityAspect .
+
+
+###  https://gsya.esi.uclm.es/roma#BSustainability
+:BSustainability rdf:type owl:NamedIndividual ,
+                          :SustainabilityRating .
+
+
+###  https://gsya.esi.uclm.es/roma#CSustainability
+:CSustainability rdf:type owl:NamedIndividual ,
+                          :SustainabilityRating .
+
+
+###  https://gsya.esi.uclm.es/roma#DSustainability
+:DSustainability rdf:type owl:NamedIndividual ,
+                          :SustainabilityRating .
+
+
+###  https://gsya.esi.uclm.es/roma#ESustainability
+:ESustainability rdf:type owl:NamedIndividual ,
+                          :SustainabilityRating .
+
+
+###  https://gsya.esi.uclm.es/roma#Efficiency
+:Efficiency rdf:type owl:NamedIndividual ,
+                     :SustainabilityAspect .
+
+
+###  https://gsya.esi.uclm.es/roma#HighPercentage
+:HighPercentage rdf:type owl:NamedIndividual ,
+                         :Percentage .
+
+
+###  https://gsya.esi.uclm.es/roma#LowPercentage
+:LowPercentage rdf:type owl:NamedIndividual ,
+                        :Percentage .
+
+
+###  https://gsya.esi.uclm.es/roma#Maintenance
+:Maintenance rdf:type owl:NamedIndividual ,
+                      :SustainabilityAspect .
+
+
+###  https://gsya.esi.uclm.es/roma#Manufacture
+:Manufacture rdf:type owl:NamedIndividual ,
+                      :ProductLifecyclePhase .
+
+
+###  https://gsya.esi.uclm.es/roma#MediumPercentage
+:MediumPercentage rdf:type owl:NamedIndividual ,
+                           :Percentage .
+
+
+###  https://gsya.esi.uclm.es/roma#Packaging
+:Packaging rdf:type owl:NamedIndividual ,
+                    :ProductLifecyclePhase .
+
+
+###  https://gsya.esi.uclm.es/roma#RawMaterial
+:RawMaterial rdf:type owl:NamedIndividual ,
+                      :ProductLifecyclePhase .
+
+
+###  https://gsya.esi.uclm.es/roma#SpareParts
+:SpareParts rdf:type owl:NamedIndividual ,
+                     :ProductLifecyclePhase .
+
+
+###  https://gsya.esi.uclm.es/roma#Transport
+:Transport rdf:type owl:NamedIndividual ,
+                    :ProductLifecyclePhase .
+
+
+###  https://gsya.esi.uclm.es/roma#Usage
+:Usage rdf:type owl:NamedIndividual ,
+                :ProductLifecyclePhase .
+
+
+###  https://gsya.esi.uclm.es/roma#VeryHighPercentage
+:VeryHighPercentage rdf:type owl:NamedIndividual ,
+                             :Percentage .
+
+
+###  https://gsya.esi.uclm.es/roma#VeryLowPercentage
+:VeryLowPercentage rdf:type owl:NamedIndividual ,
+                            :Percentage .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi

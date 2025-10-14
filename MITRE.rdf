@@ -24,7 +24,7 @@
     <!-- https://gsya.esi.uclm.es/mitre#affectsPlatform -->
 
     <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/mitre#affectsPlatform">
-        <owl:inverseOf rdf:resource="https://gsya.esi.uclm.es/mitre#hasPlatform"/>
+        <owl:inverseOf rdf:resource="https://gsya.esi.uclm.es/mitre#hasVulnerability"/>
         <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/mitre#Vulnerability"/>
         <rdfs:range rdf:resource="https://gsya.esi.uclm.es/mitre#Platform"/>
         <rdfs:comment>The vulnerability affects one or more platforms (CPE).</rdfs:comment>
@@ -45,6 +45,7 @@
     <!-- https://gsya.esi.uclm.es/mitre#definesConcept -->
 
     <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/mitre#definesConcept">
+        <owl:inverseOf rdf:resource="https://gsya.esi.uclm.es/mitre#isDocumentedBy"/>
         <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/mitre#MITREFramework"/>
         <rdfs:range rdf:resource="https://gsya.esi.uclm.es/mitre#MITREEntity"/>
         <rdfs:comment>A framework defines or describes a conceptual entity (e.g., ATT&amp;CK defines Tactics and Techniques).</rdfs:comment>
@@ -62,12 +63,12 @@
     
 
 
-    <!-- https://gsya.esi.uclm.es/mitre#hasPlatform -->
+    <!-- https://gsya.esi.uclm.es/mitre#exploitsWeakness -->
 
-    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/mitre#hasPlatform">
-        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/mitre#Platform"/>
-        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/mitre#Vulnerability"/>
-        <rdfs:comment>Inverse of affectsPlatform.</rdfs:comment>
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/mitre#exploitsWeakness">
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/mitre#ATTCK"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/mitre#CWE"/>
+        <rdfs:comment>An ATT&amp;CK technique may exploit one or more weaknesses described in CWE.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -93,12 +94,72 @@
     
 
 
+    <!-- https://gsya.esi.uclm.es/mitre#hasVulnerability -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/mitre#hasVulnerability">
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/mitre#Platform"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/mitre#Vulnerability"/>
+        <rdfs:comment>Inverse of affectsPlatform.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/mitre#hasWeakness -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/mitre#hasWeakness">
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/mitre#CAPEC"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/mitre#CWE"/>
+        <rdfs:comment>A CAPEC attack pattern is often associated with one or more underlying weaknesses described in CWE.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/mitre#includesPlatform -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/mitre#includesPlatform">
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/mitre#NVD"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/mitre#CPE"/>
+        <rdfs:comment>The NVD database includes information about affected platforms and products (CPEs).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/mitre#isCataloguedIn -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/mitre#isCataloguedIn">
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/mitre#CVE"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/mitre#NVD"/>
+        <rdfs:comment>A CVE vulnerability is listed and described in exactly one NVD entry.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://gsya.esi.uclm.es/mitre#isDocumentedBy -->
 
     <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/mitre#isDocumentedBy">
         <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/mitre#MITREEntity"/>
         <rdfs:range rdf:resource="https://gsya.esi.uclm.es/mitre#MITREFramework"/>
         <rdfs:comment>Inverse of definesConcept.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/mitre#isExploitedBy -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/mitre#isExploitedBy">
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/mitre#CWE"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/mitre#CVE"/>
+        <rdfs:comment>A CWE weakness can be exploited by one or more specific CVE vulnerabilities.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/mitre#isReferencedIn -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/mitre#isReferencedIn">
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/mitre#CWE"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/mitre#NVD"/>
+        <rdfs:comment>A weakness may be referenced in the NVD database as part of vulnerability metadata.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -120,6 +181,17 @@
         <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/mitre#Vulnerability"/>
         <rdfs:range rdf:resource="https://gsya.esi.uclm.es/mitre#MITREFramework"/>
         <rdfs:comment>The vulnerability is listed or published in a repository (e.g., CVE or NVD).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/mitre#mapsToAttackPattern -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/mitre#mapsToAttackPattern">
+        <owl:inverseOf rdf:resource="https://gsya.esi.uclm.es/mitre#relatesToTechnique"/>
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/mitre#ATTCK"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/mitre#CAPEC"/>
+        <rdfs:comment>An ATT&amp;CK technique can be mapped to one or more CAPEC attack patterns describing similar adversarial behavior.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -157,6 +229,26 @@
         <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/mitre#Weakness"/>
         <rdfs:range rdf:resource="https://gsya.esi.uclm.es/mitre#Vulnerability"/>
         <rdfs:comment>An attack pattern exploits a software weakness (CAPEC ↔ CWE).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/mitre#relatesToTechnique -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/mitre#relatesToTechnique">
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/mitre#CAPEC"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/mitre#ATTCK"/>
+        <rdfs:comment>A CAPEC attack pattern can relate back to one or more ATT&amp;CK techniques describing real-world applications.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/mitre#usesVulnerability -->
+
+    <owl:ObjectProperty rdf:about="https://gsya.esi.uclm.es/mitre#usesVulnerability">
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/mitre#ATTCK"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/mitre#CVE"/>
+        <rdfs:comment>An ATT&amp;CK technique may leverage one or more known CVE vulnerabilities during an attack.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -287,6 +379,27 @@
 
     <owl:Class rdf:about="https://gsya.esi.uclm.es/mitre#ATTCK">
         <rdfs:subClassOf rdf:resource="https://gsya.esi.uclm.es/mitre#MITREFramework"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/mitre#exploitsWeakness"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://gsya.esi.uclm.es/mitre#CWE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/mitre#mapsToAttackPattern"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://gsya.esi.uclm.es/mitre#CAPEC"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/mitre#usesVulnerability"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://gsya.esi.uclm.es/mitre#CVE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -295,6 +408,12 @@
 
     <owl:Class rdf:about="https://gsya.esi.uclm.es/mitre#AttackPattern">
         <rdfs:subClassOf rdf:resource="https://gsya.esi.uclm.es/mitre#MITREEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/mitre#exploitsVulnerability"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/mitre#Vulnerability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/mitre#relatedToWeakness"/>
@@ -309,6 +428,19 @@
 
     <owl:Class rdf:about="https://gsya.esi.uclm.es/mitre#CAPEC">
         <rdfs:subClassOf rdf:resource="https://gsya.esi.uclm.es/mitre#MITREFramework"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/mitre#hasWeakness"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/mitre#CWE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/mitre#relatesToTechnique"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://gsya.esi.uclm.es/mitre#ATTCK"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -325,6 +457,19 @@
 
     <owl:Class rdf:about="https://gsya.esi.uclm.es/mitre#CVE">
         <rdfs:subClassOf rdf:resource="https://gsya.esi.uclm.es/mitre#MITREFramework"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/mitre#affectsPlatform"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/mitre#CPE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/mitre#isCataloguedIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://gsya.esi.uclm.es/mitre#NVD"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -333,6 +478,20 @@
 
     <owl:Class rdf:about="https://gsya.esi.uclm.es/mitre#CWE">
         <rdfs:subClassOf rdf:resource="https://gsya.esi.uclm.es/mitre#MITREFramework"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/mitre#isExploitedBy"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://gsya.esi.uclm.es/mitre#CVE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/mitre#isReferencedIn"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://gsya.esi.uclm.es/mitre#NVD"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -340,6 +499,19 @@
     <!-- https://gsya.esi.uclm.es/mitre#MITREEntity -->
 
     <owl:Class rdf:about="https://gsya.esi.uclm.es/mitre#MITREEntity">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/mitre#isDocumentedBy"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/mitre#MITREFramework"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/mitre#isRelatedTo"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://gsya.esi.uclm.es/mitre#MITREFramework"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/mitre#hasDescription"/>
@@ -382,6 +554,13 @@
 
     <owl:Class rdf:about="https://gsya.esi.uclm.es/mitre#NVD">
         <rdfs:subClassOf rdf:resource="https://gsya.esi.uclm.es/mitre#MITREFramework"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/mitre#includesPlatform"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://gsya.esi.uclm.es/mitre#CPE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -390,6 +569,12 @@
 
     <owl:Class rdf:about="https://gsya.esi.uclm.es/mitre#Platform">
         <rdfs:subClassOf rdf:resource="https://gsya.esi.uclm.es/mitre#MITREEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/mitre#hasVulnerability"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/mitre#Vulnerability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/mitre#hasProduct"/>
@@ -409,12 +594,6 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    
-
-
-    <!-- https://gsya.esi.uclm.es/mitre#SecurityLevel -->
-
-    <owl:Class rdf:about="https://gsya.esi.uclm.es/mitre#SecurityLevel"/>
     
 
 
@@ -471,6 +650,20 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/mitre#mitigatedBy"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://gsya.esi.uclm.es/mitre#Tactic"/>
+                            <rdf:Description rdf:about="https://gsya.esi.uclm.es/mitre#Technique"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/mitre#hasSeverity"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -498,6 +691,12 @@
 
     <owl:Class rdf:about="https://gsya.esi.uclm.es/mitre#Weakness">
         <rdfs:subClassOf rdf:resource="https://gsya.esi.uclm.es/mitre#MITREEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://gsya.esi.uclm.es/mitre#causesVulnerability"/>
+                <owl:someValuesFrom rdf:resource="https://gsya.esi.uclm.es/mitre#Vulnerability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -515,33 +714,25 @@
 
     <!-- https://gsya.esi.uclm.es/mitre#CriticalSeverity -->
 
-    <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/mitre#CriticalSeverity">
-        <rdf:type rdf:resource="https://gsya.esi.uclm.es/mitre#SecurityLevel"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/mitre#CriticalSeverity"/>
     
 
 
     <!-- https://gsya.esi.uclm.es/mitre#HighSeverity -->
 
-    <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/mitre#HighSeverity">
-        <rdf:type rdf:resource="https://gsya.esi.uclm.es/mitre#SecurityLevel"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/mitre#HighSeverity"/>
     
 
 
     <!-- https://gsya.esi.uclm.es/mitre#LowSeverity -->
 
-    <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/mitre#LowSeverity">
-        <rdf:type rdf:resource="https://gsya.esi.uclm.es/mitre#SecurityLevel"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/mitre#LowSeverity"/>
     
 
 
     <!-- https://gsya.esi.uclm.es/mitre#MediumSeverity -->
 
-    <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/mitre#MediumSeverity">
-        <rdf:type rdf:resource="https://gsya.esi.uclm.es/mitre#SecurityLevel"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://gsya.esi.uclm.es/mitre#MediumSeverity"/>
     
 
 
