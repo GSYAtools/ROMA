@@ -1,0 +1,70 @@
+@prefix aurora: <https://gsya.esi.uclm.es/aurora#> .
+@prefix roma: <https://gsya.esi.uclm.es/roma#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://gsya.esi.uclm.es/aurora> a owl:Ontology ;
+ rdfs:label "AURORA Core v1.2" .
+
+# Core classes
+aurora:Person a owl:Class .
+aurora:ProtectedPerson a owl:Class ; rdfs:subClassOf aurora:Person .
+aurora:Resident a owl:Class ; rdfs:subClassOf aurora:Person .
+aurora:Owner a owl:Class ; rdfs:subClassOf aurora:Person .
+aurora:Guest a owl:Class ; rdfs:subClassOf aurora:Person .
+aurora:Caregiver a owl:Class ; rdfs:subClassOf aurora:Person .
+aurora:Technician a owl:Class ; rdfs:subClassOf aurora:Person .
+
+aurora:SmartHome a owl:Class .
+aurora:Room a owl:Class .
+aurora:Zone a owl:Class .
+aurora:HomeNode a owl:Class .
+
+aurora:Context a owl:Class .
+aurora:PresenceState a owl:Class .
+aurora:ConnectivityState a owl:Class .
+aurora:OccupancyState a owl:Class .
+aurora:EmergencyState a owl:Class .
+aurora:TimeContext a owl:Class .
+aurora:LocationContext a owl:Class .
+
+aurora:Data a owl:Class .
+aurora:PersonalData a owl:Class ; rdfs:subClassOf aurora:Data .
+aurora:SensitiveData a owl:Class ; rdfs:subClassOf aurora:PersonalData .
+aurora:Consent a owl:Class .
+aurora:ProcessingPurpose a owl:Class .
+aurora:RetentionPolicy a owl:Class .
+aurora:DataFlow a owl:Class .
+
+aurora:PersonalImpact a owl:Class .
+aurora:PhysicalHarm a owl:Class ; rdfs:subClassOf aurora:PersonalImpact .
+aurora:PrivacyLoss a owl:Class ; rdfs:subClassOf aurora:PersonalImpact .
+aurora:Fraud a owl:Class ; rdfs:subClassOf aurora:PersonalImpact .
+aurora:EconomicLoss a owl:Class ; rdfs:subClassOf aurora:PersonalImpact .
+aurora:PsychologicalImpact a owl:Class ; rdfs:subClassOf aurora:PersonalImpact .
+aurora:LossOfAutonomy a owl:Class ; rdfs:subClassOf aurora:PersonalImpact .
+
+aurora:PersonalRisk a owl:Class .
+aurora:PersonalRiskAssessment a owl:Class .
+aurora:Event a owl:Class .
+aurora:Alert a owl:Class .
+aurora:Recommendation a owl:Class .
+aurora:TrustRelationship a owl:Class .
+
+# Object properties
+aurora:livesIn a owl:ObjectProperty ; rdfs:domain aurora:Person ; rdfs:range aurora:SmartHome .
+aurora:usesAsset a owl:ObjectProperty ; rdfs:domain aurora:Person ; rdfs:range roma:Asset .
+aurora:derivedFromRisk a owl:ObjectProperty ; rdfs:domain aurora:PersonalRisk ; rdfs:range roma:Risk .
+aurora:impactsPerson a owl:ObjectProperty ; rdfs:domain aurora:PersonalRisk ; rdfs:range aurora:Person .
+aurora:hasPersonalImpact a owl:ObjectProperty ; rdfs:domain aurora:PersonalRisk ; rdfs:range aurora:PersonalImpact .
+aurora:dependsOnContext a owl:ObjectProperty ; rdfs:domain aurora:PersonalRisk ; rdfs:range aurora:Context .
+aurora:mayCauseImpact a owl:ObjectProperty ; rdfs:domain roma:Risk ; rdfs:range aurora:PersonalImpact .
+
+# Data properties
+aurora:personIdentifier a owl:DatatypeProperty ; rdfs:domain aurora:Person ; rdfs:range xsd:string .
+aurora:personName a owl:DatatypeProperty ; rdfs:domain aurora:Person ; rdfs:range xsd:string .
+aurora:age a owl:DatatypeProperty ; rdfs:domain aurora:Person ; rdfs:range xsd:integer .
+aurora:personalRiskScore a owl:DatatypeProperty ; rdfs:domain aurora:PersonalRisk ; rdfs:range xsd:decimal .
+aurora:impactSeverity a owl:DatatypeProperty ; rdfs:domain aurora:PersonalImpact ; rdfs:range xsd:integer .
