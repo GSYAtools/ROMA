@@ -1,0 +1,1160 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://gsya.esi.uclm.es/ecosec"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://gsya.esi.uclm.es/ecosec">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="ontocarmen" IRI="https://gsya.esi.uclm.es/ontocarmen#"/>
+    <Import>https://gsya.esi.uclm.es/ontocarmen</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>EcoSec is a comprehensive sustainability ontology designed to systematically assess and label the sustainability impact of security mechanisms and devices across their lifecycle or operational scope. By assigning sustainability labels ranging from A (most sustainable) to G (least sustainable), EcoSec provides a nuanced framework for evaluating the environmental and operational sustainability of various elements. 
+For security mechanisms, EcoSec assesses key aspects such as adoption, maintenance, and efficiency to understand their sustainability footprint.
+ In the context of devices, the ontology adopts a lifecycle approach, meticulously evaluating the sustainability performance at each stage (from raw material sourcing, manufacturing, and packaging, to transport, usage, spare parts availability, and end-of-life management).</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="/SustainabilityLabel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#deviceHasEndOfLifeSustainabilityLabel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#deviceHasManufactureSustainabilityLabel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#deviceHasPackagingSustainabilityLabel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#deviceHasRawMaterialSustainabilityLabel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#deviceHasSparePartsSustainabilityLabel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#deviceHasSustainabilityLabel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#deviceHasTransportSustainabilityLabel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#deviceHasUsageSustainabilityLabel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#securityConstraintHasAdoptionSustainabilityLabel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#securityConstraintHasEfficiencySustainabilityLabel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#securityConstraintHasMaintenanceSustainabilityLabel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#securityConstraintHasSustainabilityLabel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#securityFeatureHasSustainabilityLabel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isLessSustainableThan"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isMoreSustainableThan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AES128GCMCipherIndividual"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CamelliaCipherIndividual"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ChaCha20CipherIndividual"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HTTPSChannelIndividual"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MultiFactorPasswordIndividual"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OpenPGPCertificateIndividual"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OpenSSLCertificateIndividual"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PSKSignatureIndividual"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SAMLCertificateIndividual"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SHA2SecureHashingIndividual"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SHA3SecureHashingIndividual"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SR1-BLEProtocol"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SRPSignatureIndividual"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SSLTLSChannelIndividual"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#StrongPasswordIndividual"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TunnelingChannelIndividual"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WeakPasswordIndividual"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#X509CertificateIndividual"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/ASustainabilityLabel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/CSustainabilityLabel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/DSustainabilityLabel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/ESustainabilityLabel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/FSustainabilityLabel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/GSustainabilityLabel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/SR1-Asset-a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/SR1-ConfidentialityProperty"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/SR1-MicroController"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/SR1-RFIDProtocol"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/SR1-SecurityFeature-sf"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/SR1-SecurityRequirement"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/SR1-TemperatureSensor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/SR1-WLAN"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="/SustainabilityLabel"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="/ASustainabilityLabel"/>
+            <NamedIndividual IRI="/BSustainabilityLabel"/>
+            <NamedIndividual IRI="/CSustainabilityLabel"/>
+            <NamedIndividual IRI="/DSustainabilityLabel"/>
+            <NamedIndividual IRI="/ESustainabilityLabel"/>
+            <NamedIndividual IRI="/FSustainabilityLabel"/>
+            <NamedIndividual IRI="/GSustainabilityLabel"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="https://gsya.esi.uclm.es/ontocarmen/Device"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#deviceHasEndOfLifeSustainabilityLabel"/>
+            <Class IRI="/SustainabilityLabel"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://gsya.esi.uclm.es/ontocarmen/Device"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#deviceHasManufactureSustainabilityLabel"/>
+            <Class IRI="/SustainabilityLabel"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://gsya.esi.uclm.es/ontocarmen/Device"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#deviceHasPackagingSustainabilityLabel"/>
+            <Class IRI="/SustainabilityLabel"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://gsya.esi.uclm.es/ontocarmen/Device"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#deviceHasRawMaterialSustainabilityLabel"/>
+            <Class IRI="/SustainabilityLabel"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://gsya.esi.uclm.es/ontocarmen/Device"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#deviceHasSparePartsSustainabilityLabel"/>
+            <Class IRI="/SustainabilityLabel"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://gsya.esi.uclm.es/ontocarmen/Device"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#deviceHasSustainabilityLabel"/>
+            <Class IRI="/SustainabilityLabel"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://gsya.esi.uclm.es/ontocarmen/Device"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#deviceHasTransportSustainabilityLabel"/>
+            <Class IRI="/SustainabilityLabel"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://gsya.esi.uclm.es/ontocarmen/Device"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#deviceHasUsageSustainabilityLabel"/>
+            <Class IRI="/SustainabilityLabel"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://gsya.esi.uclm.es/ontocarmen/SecurityConstraint"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#securityConstraintHasAdoptionSustainabilityLabel"/>
+            <Class IRI="/SustainabilityLabel"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://gsya.esi.uclm.es/ontocarmen/SecurityConstraint"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#securityConstraintHasEfficiencySustainabilityLabel"/>
+            <Class IRI="/SustainabilityLabel"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://gsya.esi.uclm.es/ontocarmen/SecurityConstraint"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#securityConstraintHasMaintenanceSustainabilityLabel"/>
+            <Class IRI="/SustainabilityLabel"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://gsya.esi.uclm.es/ontocarmen/SecurityConstraint"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#securityConstraintHasSustainabilityLabel"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="https://gsya.esi.uclm.es/ontocarmen/SecurityFeature"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#securityFeatureHasSustainabilityLabel"/>
+            <Class IRI="/SustainabilityLabel"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontocarmen:AES128GCMCipher"/>
+        <NamedIndividual IRI="#AES128GCMCipherIndividual"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontocarmen:CamelliaCipher"/>
+        <NamedIndividual IRI="#CamelliaCipherIndividual"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontocarmen:ChaCha20Cipher"/>
+        <NamedIndividual IRI="#ChaCha20CipherIndividual"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontocarmen:HTTPSChannel"/>
+        <NamedIndividual IRI="#HTTPSChannelIndividual"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontocarmen:MultiFactorPassword"/>
+        <NamedIndividual IRI="#MultiFactorPasswordIndividual"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontocarmen:OpenPGPCertificate"/>
+        <NamedIndividual IRI="#OpenPGPCertificateIndividual"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontocarmen:OpenSSLCertificate"/>
+        <NamedIndividual IRI="#OpenSSLCertificateIndividual"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontocarmen:PSKSignature"/>
+        <NamedIndividual IRI="#PSKSignatureIndividual"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontocarmen:SAMLCertificate"/>
+        <NamedIndividual IRI="#SAMLCertificateIndividual"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontocarmen:SHA2SecureHashing"/>
+        <NamedIndividual IRI="#SHA2SecureHashingIndividual"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontocarmen:SHA3SecureHashing"/>
+        <NamedIndividual IRI="#SHA3SecureHashingIndividual"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontocarmen:SRPSignature"/>
+        <NamedIndividual IRI="#SRPSignatureIndividual"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontocarmen:SSLTLSChannel"/>
+        <NamedIndividual IRI="#SSLTLSChannelIndividual"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontocarmen:StrongPassword"/>
+        <NamedIndividual IRI="#StrongPasswordIndividual"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontocarmen:TunnelingChannel"/>
+        <NamedIndividual IRI="#TunnelingChannelIndividual"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontocarmen:WeakPassword"/>
+        <NamedIndividual IRI="#WeakPasswordIndividual"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ontocarmen:X509Certificate"/>
+        <NamedIndividual IRI="#X509CertificateIndividual"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/SustainabilityLabel"/>
+        <NamedIndividual IRI="/ASustainabilityLabel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/SustainabilityLabel"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/SustainabilityLabel"/>
+        <NamedIndividual IRI="/CSustainabilityLabel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/SustainabilityLabel"/>
+        <NamedIndividual IRI="/DSustainabilityLabel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/SustainabilityLabel"/>
+        <NamedIndividual IRI="/ESustainabilityLabel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/SustainabilityLabel"/>
+        <NamedIndividual IRI="/FSustainabilityLabel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/SustainabilityLabel"/>
+        <NamedIndividual IRI="/GSustainabilityLabel"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasAdoptionSustainabilityLabel"/>
+        <NamedIndividual IRI="#AES128GCMCipherIndividual"/>
+        <NamedIndividual IRI="/ASustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasEfficiencySustainabilityLabel"/>
+        <NamedIndividual IRI="#AES128GCMCipherIndividual"/>
+        <NamedIndividual IRI="/ASustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasMaintenanceSustainabilityLabel"/>
+        <NamedIndividual IRI="#AES128GCMCipherIndividual"/>
+        <NamedIndividual IRI="/ASustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasSustainabilityLabel"/>
+        <NamedIndividual IRI="#AES128GCMCipherIndividual"/>
+        <NamedIndividual IRI="/ASustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasAdoptionSustainabilityLabel"/>
+        <NamedIndividual IRI="#CamelliaCipherIndividual"/>
+        <NamedIndividual IRI="/CSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasEfficiencySustainabilityLabel"/>
+        <NamedIndividual IRI="#CamelliaCipherIndividual"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasMaintenanceSustainabilityLabel"/>
+        <NamedIndividual IRI="#CamelliaCipherIndividual"/>
+        <NamedIndividual IRI="/CSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasSustainabilityLabel"/>
+        <NamedIndividual IRI="#CamelliaCipherIndividual"/>
+        <NamedIndividual IRI="/CSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasAdoptionSustainabilityLabel"/>
+        <NamedIndividual IRI="#ChaCha20CipherIndividual"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasEfficiencySustainabilityLabel"/>
+        <NamedIndividual IRI="#ChaCha20CipherIndividual"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasMaintenanceSustainabilityLabel"/>
+        <NamedIndividual IRI="#ChaCha20CipherIndividual"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasSustainabilityLabel"/>
+        <NamedIndividual IRI="#ChaCha20CipherIndividual"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasAdoptionSustainabilityLabel"/>
+        <NamedIndividual IRI="#HTTPSChannelIndividual"/>
+        <NamedIndividual IRI="/ASustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasEfficiencySustainabilityLabel"/>
+        <NamedIndividual IRI="#HTTPSChannelIndividual"/>
+        <NamedIndividual IRI="/ASustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasMaintenanceSustainabilityLabel"/>
+        <NamedIndividual IRI="#HTTPSChannelIndividual"/>
+        <NamedIndividual IRI="/ASustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasSustainabilityLabel"/>
+        <NamedIndividual IRI="#HTTPSChannelIndividual"/>
+        <NamedIndividual IRI="/ASustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasAdoptionSustainabilityLabel"/>
+        <NamedIndividual IRI="#MultiFactorPasswordIndividual"/>
+        <NamedIndividual IRI="/ASustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasEfficiencySustainabilityLabel"/>
+        <NamedIndividual IRI="#MultiFactorPasswordIndividual"/>
+        <NamedIndividual IRI="/ASustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasMaintenanceSustainabilityLabel"/>
+        <NamedIndividual IRI="#MultiFactorPasswordIndividual"/>
+        <NamedIndividual IRI="/ASustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasSustainabilityLabel"/>
+        <NamedIndividual IRI="#MultiFactorPasswordIndividual"/>
+        <NamedIndividual IRI="/ASustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasAdoptionSustainabilityLabel"/>
+        <NamedIndividual IRI="#OpenPGPCertificateIndividual"/>
+        <NamedIndividual IRI="/CSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasEfficiencySustainabilityLabel"/>
+        <NamedIndividual IRI="#OpenPGPCertificateIndividual"/>
+        <NamedIndividual IRI="/CSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasMaintenanceSustainabilityLabel"/>
+        <NamedIndividual IRI="#OpenPGPCertificateIndividual"/>
+        <NamedIndividual IRI="/CSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasSustainabilityLabel"/>
+        <NamedIndividual IRI="#OpenPGPCertificateIndividual"/>
+        <NamedIndividual IRI="/CSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasAdoptionSustainabilityLabel"/>
+        <NamedIndividual IRI="#OpenSSLCertificateIndividual"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasEfficiencySustainabilityLabel"/>
+        <NamedIndividual IRI="#OpenSSLCertificateIndividual"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasMaintenanceSustainabilityLabel"/>
+        <NamedIndividual IRI="#OpenSSLCertificateIndividual"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasSustainabilityLabel"/>
+        <NamedIndividual IRI="#OpenSSLCertificateIndividual"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasAdoptionSustainabilityLabel"/>
+        <NamedIndividual IRI="#PSKSignatureIndividual"/>
+        <NamedIndividual IRI="/CSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasEfficiencySustainabilityLabel"/>
+        <NamedIndividual IRI="#PSKSignatureIndividual"/>
+        <NamedIndividual IRI="/CSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasMaintenanceSustainabilityLabel"/>
+        <NamedIndividual IRI="#PSKSignatureIndividual"/>
+        <NamedIndividual IRI="/CSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasSustainabilityLabel"/>
+        <NamedIndividual IRI="#PSKSignatureIndividual"/>
+        <NamedIndividual IRI="/CSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasAdoptionSustainabilityLabel"/>
+        <NamedIndividual IRI="#SAMLCertificateIndividual"/>
+        <NamedIndividual IRI="/DSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasEfficiencySustainabilityLabel"/>
+        <NamedIndividual IRI="#SAMLCertificateIndividual"/>
+        <NamedIndividual IRI="/CSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasMaintenanceSustainabilityLabel"/>
+        <NamedIndividual IRI="#SAMLCertificateIndividual"/>
+        <NamedIndividual IRI="/CSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasSustainabilityLabel"/>
+        <NamedIndividual IRI="#SAMLCertificateIndividual"/>
+        <NamedIndividual IRI="/DSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasAdoptionSustainabilityLabel"/>
+        <NamedIndividual IRI="#SHA2SecureHashingIndividual"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasEfficiencySustainabilityLabel"/>
+        <NamedIndividual IRI="#SHA2SecureHashingIndividual"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasMaintenanceSustainabilityLabel"/>
+        <NamedIndividual IRI="#SHA2SecureHashingIndividual"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasSustainabilityLabel"/>
+        <NamedIndividual IRI="#SHA2SecureHashingIndividual"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasAdoptionSustainabilityLabel"/>
+        <NamedIndividual IRI="#SHA3SecureHashingIndividual"/>
+        <NamedIndividual IRI="/ASustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasEfficiencySustainabilityLabel"/>
+        <NamedIndividual IRI="#SHA3SecureHashingIndividual"/>
+        <NamedIndividual IRI="/ASustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasMaintenanceSustainabilityLabel"/>
+        <NamedIndividual IRI="#SHA3SecureHashingIndividual"/>
+        <NamedIndividual IRI="/ASustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasSustainabilityLabel"/>
+        <NamedIndividual IRI="#SHA3SecureHashingIndividual"/>
+        <NamedIndividual IRI="/ASustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasAdoptionSustainabilityLabel"/>
+        <NamedIndividual IRI="#SRPSignatureIndividual"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasEfficiencySustainabilityLabel"/>
+        <NamedIndividual IRI="#SRPSignatureIndividual"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasMaintenanceSustainabilityLabel"/>
+        <NamedIndividual IRI="#SRPSignatureIndividual"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasSustainabilityLabel"/>
+        <NamedIndividual IRI="#SRPSignatureIndividual"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasAdoptionSustainabilityLabel"/>
+        <NamedIndividual IRI="#SSLTLSChannelIndividual"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasEfficiencySustainabilityLabel"/>
+        <NamedIndividual IRI="#SSLTLSChannelIndividual"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasMaintenanceSustainabilityLabel"/>
+        <NamedIndividual IRI="#SSLTLSChannelIndividual"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasSustainabilityLabel"/>
+        <NamedIndividual IRI="#SSLTLSChannelIndividual"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasAdoptionSustainabilityLabel"/>
+        <NamedIndividual IRI="#StrongPasswordIndividual"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasEfficiencySustainabilityLabel"/>
+        <NamedIndividual IRI="#StrongPasswordIndividual"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasMaintenanceSustainabilityLabel"/>
+        <NamedIndividual IRI="#StrongPasswordIndividual"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasSustainabilityLabel"/>
+        <NamedIndividual IRI="#StrongPasswordIndividual"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasAdoptionSustainabilityLabel"/>
+        <NamedIndividual IRI="#TunnelingChannelIndividual"/>
+        <NamedIndividual IRI="/CSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasEfficiencySustainabilityLabel"/>
+        <NamedIndividual IRI="#TunnelingChannelIndividual"/>
+        <NamedIndividual IRI="/CSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasMaintenanceSustainabilityLabel"/>
+        <NamedIndividual IRI="#TunnelingChannelIndividual"/>
+        <NamedIndividual IRI="/CSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasSustainabilityLabel"/>
+        <NamedIndividual IRI="#TunnelingChannelIndividual"/>
+        <NamedIndividual IRI="/CSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasAdoptionSustainabilityLabel"/>
+        <NamedIndividual IRI="#WeakPasswordIndividual"/>
+        <NamedIndividual IRI="/DSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasEfficiencySustainabilityLabel"/>
+        <NamedIndividual IRI="#WeakPasswordIndividual"/>
+        <NamedIndividual IRI="/DSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasMaintenanceSustainabilityLabel"/>
+        <NamedIndividual IRI="#WeakPasswordIndividual"/>
+        <NamedIndividual IRI="/DSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasSustainabilityLabel"/>
+        <NamedIndividual IRI="#WeakPasswordIndividual"/>
+        <NamedIndividual IRI="/GSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasAdoptionSustainabilityLabel"/>
+        <NamedIndividual IRI="#X509CertificateIndividual"/>
+        <NamedIndividual IRI="/ASustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasEfficiencySustainabilityLabel"/>
+        <NamedIndividual IRI="#X509CertificateIndividual"/>
+        <NamedIndividual IRI="/ASustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasMaintenanceSustainabilityLabel"/>
+        <NamedIndividual IRI="#X509CertificateIndividual"/>
+        <NamedIndividual IRI="/ASustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasSustainabilityLabel"/>
+        <NamedIndividual IRI="#X509CertificateIndividual"/>
+        <NamedIndividual IRI="/ASustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isMoreSustainableThan"/>
+        <NamedIndividual IRI="/ASustainabilityLabel"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isLessSustainableThan"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+        <NamedIndividual IRI="/ASustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isMoreSustainableThan"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+        <NamedIndividual IRI="/CSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isLessSustainableThan"/>
+        <NamedIndividual IRI="/CSustainabilityLabel"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isMoreSustainableThan"/>
+        <NamedIndividual IRI="/CSustainabilityLabel"/>
+        <NamedIndividual IRI="/DSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isLessSustainableThan"/>
+        <NamedIndividual IRI="/DSustainabilityLabel"/>
+        <NamedIndividual IRI="/CSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isMoreSustainableThan"/>
+        <NamedIndividual IRI="/DSustainabilityLabel"/>
+        <NamedIndividual IRI="/ESustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isLessSustainableThan"/>
+        <NamedIndividual IRI="/ESustainabilityLabel"/>
+        <NamedIndividual IRI="/DSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isMoreSustainableThan"/>
+        <NamedIndividual IRI="/ESustainabilityLabel"/>
+        <NamedIndividual IRI="/FSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isLessSustainableThan"/>
+        <NamedIndividual IRI="/FSustainabilityLabel"/>
+        <NamedIndividual IRI="/ESustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isMoreSustainableThan"/>
+        <NamedIndividual IRI="/FSustainabilityLabel"/>
+        <NamedIndividual IRI="/GSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isLessSustainableThan"/>
+        <NamedIndividual IRI="/GSustainabilityLabel"/>
+        <NamedIndividual IRI="/FSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontocarmen:assetHasDevice"/>
+        <NamedIndividual IRI="/SR1-Asset-a"/>
+        <NamedIndividual IRI="/SR1-MicroController"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontocarmen:assetHasDevice"/>
+        <NamedIndividual IRI="/SR1-Asset-a"/>
+        <NamedIndividual IRI="/SR1-TemperatureSensor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontocarmen:assetHasInfrastructure"/>
+        <NamedIndividual IRI="/SR1-Asset-a"/>
+        <NamedIndividual IRI="#SR1-BLEProtocol"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontocarmen:assetHasInfrastructure"/>
+        <NamedIndividual IRI="/SR1-Asset-a"/>
+        <NamedIndividual IRI="/SR1-RFIDProtocol"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontocarmen:assetHasInfrastructure"/>
+        <NamedIndividual IRI="/SR1-Asset-a"/>
+        <NamedIndividual IRI="/SR1-WLAN"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#securityConstraintHasSustainabilityLabel"/>
+        <NamedIndividual IRI="/SR1-SecurityFeature-sf"/>
+        <NamedIndividual IRI="/BSustainabilityLabel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontocarmen:securityFeatureHasProperty"/>
+        <NamedIndividual IRI="/SR1-SecurityFeature-sf"/>
+        <NamedIndividual IRI="/SR1-ConfidentialityProperty"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontocarmen:securityFeatureHasSecurityConstraint"/>
+        <NamedIndividual IRI="/SR1-SecurityFeature-sf"/>
+        <NamedIndividual IRI="#CamelliaCipherIndividual"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontocarmen:securityFeatureHasSecurityConstraint"/>
+        <NamedIndividual IRI="/SR1-SecurityFeature-sf"/>
+        <NamedIndividual IRI="#HTTPSChannelIndividual"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontocarmen:securityFeatureHasSecurityLevel"/>
+        <NamedIndividual IRI="/SR1-SecurityFeature-sf"/>
+        <NamedIndividual IRI="https://gsya.esi.uclm.es/ontocarmen/HighSecurityLevel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontocarmen:securityRequirementHasAsset"/>
+        <NamedIndividual IRI="/SR1-SecurityRequirement"/>
+        <NamedIndividual IRI="/SR1-Asset-a"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ontocarmen:securityRequirementHasSecurityFeature"/>
+        <NamedIndividual IRI="/SR1-SecurityRequirement"/>
+        <NamedIndividual IRI="/SR1-SecurityFeature-sf"/>
+    </ObjectPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/isLessSustainableThan"/>
+        <ObjectProperty IRI="/isMoreSustainableThan"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#deviceHasEndOfLifeSustainabilityLabel"/>
+        <Class IRI="https://gsya.esi.uclm.es/ontocarmen/Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#deviceHasManufactureSustainabilityLabel"/>
+        <Class IRI="https://gsya.esi.uclm.es/ontocarmen/Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#deviceHasPackagingSustainabilityLabel"/>
+        <Class IRI="https://gsya.esi.uclm.es/ontocarmen/Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#deviceHasRawMaterialSustainabilityLabel"/>
+        <Class IRI="https://gsya.esi.uclm.es/ontocarmen/Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#deviceHasSparePartsSustainabilityLabel"/>
+        <Class IRI="https://gsya.esi.uclm.es/ontocarmen/Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#deviceHasSustainabilityLabel"/>
+        <Class IRI="https://gsya.esi.uclm.es/ontocarmen/Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#deviceHasTransportSustainabilityLabel"/>
+        <Class IRI="https://gsya.esi.uclm.es/ontocarmen/Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#deviceHasUsageSustainabilityLabel"/>
+        <Class IRI="https://gsya.esi.uclm.es/ontocarmen/Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#securityConstraintHasAdoptionSustainabilityLabel"/>
+        <Class IRI="https://gsya.esi.uclm.es/ontocarmen/SecurityConstraint"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#securityConstraintHasEfficiencySustainabilityLabel"/>
+        <Class IRI="https://gsya.esi.uclm.es/ontocarmen/SecurityConstraint"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#securityConstraintHasMaintenanceSustainabilityLabel"/>
+        <Class IRI="https://gsya.esi.uclm.es/ontocarmen/SecurityConstraint"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#securityConstraintHasSustainabilityLabel"/>
+        <Class IRI="https://gsya.esi.uclm.es/ontocarmen/SecurityConstraint"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#securityFeatureHasSustainabilityLabel"/>
+        <Class IRI="https://gsya.esi.uclm.es/ontocarmen/SecurityFeature"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isLessSustainableThan"/>
+        <Class IRI="/SustainabilityLabel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isMoreSustainableThan"/>
+        <Class IRI="/SustainabilityLabel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#deviceHasEndOfLifeSustainabilityLabel"/>
+        <Class IRI="/SustainabilityLabel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#deviceHasManufactureSustainabilityLabel"/>
+        <Class IRI="/SustainabilityLabel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#deviceHasPackagingSustainabilityLabel"/>
+        <Class IRI="/SustainabilityLabel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#deviceHasRawMaterialSustainabilityLabel"/>
+        <Class IRI="/SustainabilityLabel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#deviceHasSparePartsSustainabilityLabel"/>
+        <Class IRI="/SustainabilityLabel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#deviceHasSustainabilityLabel"/>
+        <Class IRI="/SustainabilityLabel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#deviceHasTransportSustainabilityLabel"/>
+        <Class IRI="/SustainabilityLabel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#deviceHasUsageSustainabilityLabel"/>
+        <Class IRI="/SustainabilityLabel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#securityConstraintHasAdoptionSustainabilityLabel"/>
+        <Class IRI="/SustainabilityLabel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#securityConstraintHasEfficiencySustainabilityLabel"/>
+        <Class IRI="/SustainabilityLabel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#securityConstraintHasMaintenanceSustainabilityLabel"/>
+        <Class IRI="/SustainabilityLabel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#securityConstraintHasSustainabilityLabel"/>
+        <Class IRI="/SustainabilityLabel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#securityFeatureHasSustainabilityLabel"/>
+        <Class IRI="/SustainabilityLabel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isLessSustainableThan"/>
+        <Class IRI="/SustainabilityLabel"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isMoreSustainableThan"/>
+        <Class IRI="/SustainabilityLabel"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AES128GCMCipherIndividual</IRI>
+        <Literal>Marked by its efficiency and broad adoption, the AES-128-GCM Cipher achieves &apos;A&apos; ratings, highlighting its role as a sustainable cipher choice.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CamelliaCipherIndividual</IRI>
+        <Literal>Though efficient, the Camellia Cipher&apos;s lower adoption and moderate maintenance requirements reflect its &apos;C&apos; sustainability label, with room for broader acceptance.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ChaCha20CipherIndividual</IRI>
+        <Literal>The ChaCha20 Cipher&apos;s good efficiency, particularly on mobile devices, secures it &apos;B&apos; ratings, standing out for its performance and sustainable security approach.&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HTTPSChannelIndividual</IRI>
+        <Literal>The universality and efficiency in the implementation of the HTTPS Channel secure it an &apos;A&apos; rating across the board, showcasing optimal sustainability in secure communications.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MultiFactorPasswordIndividual</IRI>
+        <Literal>Greater security and a reduced frequency of changes earn the Multi-Factor Password an &apos;A&apos; rating in all categories, underscoring its exceptional sustainability in safeguarding access.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OpenPGPCertificateIndividual</IRI>
+        <Literal>This security mechanism is universal in its application but entails some complexity, which moderately impacts its overall sustainability rating. Its universality is tempered by complexities that moderate its efficiency, maintenance, and adoption scores, reflecting a balanced sustainability performance.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OpenSSLCertificateIndividual</IRI>
+        <Literal>Efficiency and compatibility drive the OpenSSL Certificate to a &apos;B&apos; sustainability rating across all aspects. It demonstrates high efficiency and broad compatibility, making it a sustainable choice for security implementations.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PSKSignatureIndividual</IRI>
+        <Literal>The PSK Signature&apos;s niche application and specific use result in &apos;C&apos; sustainability ratings, indicating moderate sustainability performance.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SAMLCertificateIndividual</IRI>
+        <Literal>The SAML Certificate is specific to certain use cases and requires consistent maintenance, impacting its sustainability. Its lower adoption score reflects niche application areas and greater maintenance demands.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SHA2SecureHashingIndividual</IRI>
+        <Literal>Widely adopted yet transitioning towards SHA-3, SHA-2 Secure Hashing maintains &apos;B&apos; ratings, reflecting its current relevance and sustainability in secure hashing.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SHA3SecureHashingIndividual</IRI>
+        <Literal>The new, efficient design of SHA-3 Secure Hashing designed for longevity secures it an &apos;A&apos; rating across all categories, marking it as a highly sustainable choice for secure hashing.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SRPSignatureIndividual</IRI>
+        <Literal>Balancing efficiency with security, the SRP Signature achieves &apos;B&apos; ratings, demonstrating its sustainable application in secure signature processes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SSLTLSChannelIndividual</IRI>
+        <Literal>As the foundational technology for HTTPS, the SSL/TLS Channel exhibits high efficiency and broad version support, justifying its &apos;B&apos; sustainability ratings.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#StrongPasswordIndividual</IRI>
+        <Literal>The Strong Password balances security and usability well, achieving &apos;B&apos; sustainability ratings. It represents a solid choice for secure yet user-friendly access controls.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TunnelingChannelIndividual</IRI>
+        <Literal>The Tunneling Channel&apos;s sustainability is moderated by its type-dependent resource requirements, resulting in &apos;C&apos; ratings across efficiency, maintenance, and adoption.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WeakPasswordIndividual</IRI>
+        <Literal>The frequent need for changes due to security vulnerabilities places the Weak Password at a &apos;G&apos; sustainability rating, highlighting significant sustainability concerns.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#X509CertificateIndividual</IRI>
+        <Literal>Broad adoption and interoperability grant the X.509 Certificate an &apos;A&apos; rating in all sustainability categories. Its widespread acceptance and efficiency make it an exemplary model of sustainable security practice.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#deviceHasEndOfLifeSustainabilityLabel</IRI>
+        <Literal>Associates a device with a sustainability label for end-of-life management, focusing on recyclability, return programs, and reusability. Assesses the ease of device disassembly and material sorting, initiatives for device return to manufacturers or recycling points, and the potential for component or entire device reuse.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#deviceHasManufactureSustainabilityLabel</IRI>
+        <Literal>Links a device to a sustainability label for its manufacturing stage, considering CO2 emissions, water consumption, renewable energy usage, and waste treatment. Factors assessed include CO2 equivalent emissions, water usage efficiency, the percentage of renewable energy in manufacturing processes, and the effectiveness of production waste recycling and disposal.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#deviceHasPackagingSustainabilityLabel</IRI>
+        <Literal>Connects a device to a sustainability label for packaging, focusing on material types, efficiency, and sustainability information. Evaluates the use of recyclable, biodegradable, and reusable materials, optimization of packaging design to reduce waste, and the presence of labeling with recycling and disposal guidelines.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#deviceHasRawMaterialSustainabilityLabel</IRI>
+        <Literal>Associates a device with a sustainability label for the raw materials stage, evaluating material origin, extraction impacts, efficiency, recycled content, and compliance with hazardous substance regulations. This comprehensive assessment covers types of materials (recycled, renewable, conflict-free), environmental and social impacts of extraction, material usage efficiency, percentage of recycled materials, and adherence to standards like RoHS and REACH.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#deviceHasSparePartsSustainabilityLabel</IRI>
+        <Literal>Connects a device to a sustainability label for spare parts, evaluating availability, compatibility, and sustainability. Addresses ease of access to spare parts, their compatibility across different sources or models, and the environmental impact of materials and manufacturing processes for spare parts.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#deviceHasSustainabilityLabel</IRI>
+        <Literal>Associates a device with its overall sustainability label, calculated based on the sustainability labels of each stage in the device&apos;s lifecycle, including raw material acquisition, manufacture, packaging, transport, usage, spare parts, and end of life. This comprehensive label, ranging from A to G, encapsulates the device&apos;s total environmental impact, reflecting a holistic assessment of its sustainability performance across all lifecycle stages.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#deviceHasTransportSustainabilityLabel</IRI>
+        <Literal>Associates a device with a sustainability label for transport, assessing transport mode efficiency, logistics optimization, and transport packaging. Considers the efficiency of air, sea, and land transportation, measures to reduce transportation distances and consolidate shipments, and efforts to minimize volume and weight for transport efficiency.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#deviceHasUsageSustainabilityLabel</IRI>
+        <Literal>Links a device to a sustainability label for usage, covering energy efficiency, durability, repairability, and software updates. Reviews energy consumption, physical resistance, estimated lifespan, ease of repair, spare parts availability, and the impact of long-term software support on functionality and efficiency.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#securityConstraintHasAdoptionSustainabilityLabel</IRI>
+        <Literal>Associates a security mechanism with its adoption label, reflecting the extent to which the technology has been accepted and adopted within the industry. This label, ranging from A to G, indicates the mechanism&apos;s prevalence and popularity among users and developers, providing insight into its widespread or limited adoption. The adoption label is a sustainability label, categorizing the mechanism&apos;s environmental and operational sustainability in terms of its adoption.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#securityConstraintHasEfficiencySustainabilityLabel</IRI>
+        <Literal>Links a security mechanism to its efficiency label, indicating the resource effectiveness and performance of the technology in operational environments. This label, which ranges from A to G, evaluates the mechanism&apos;s sustainability by measuring its computational efficiency, energy consumption, and the optimization of resources required for its functionality. The efficiency label is a sustainability label that underscores the environmental and economic impact of deploying and operating the security mechanism.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#securityConstraintHasMaintenanceSustainabilityLabel</IRI>
+        <Literal>Connects a security mechanism to its maintenance label, which quantifies the effort and resources required to keep the technology secure and up-to-date over time. This label, ranging from A to G, assesses the mechanism&apos;s sustainability in terms of ongoing support, frequency of updates needed, and overall lifecycle management. The maintenance label is a sustainability label that highlights the operational efficiency and long-term viability of the security mechanism.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#securityConstraintHasSustainabilityLabel</IRI>
+        <Literal>Associates a security mechanism with its overall sustainability label, which represents a comprehensive evaluation of the mechanism&apos;s sustainability across three key dimensions: adoption, maintenance, and efficiency. This label, ranging from A to G, is calculated based on the combined assessments of the mechanism&apos;s adoption label, maintenance label, and efficiency label. The overall sustainability label provides a holistic view of the environmental, economic, and operational sustainability of the security mechanism, reflecting its long-term viability and impact.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#securityFeatureHasSustainabilityLabel</IRI>
+        <Literal>Connects a security feature to a minimum sustainability label requirement, indicating the lowest acceptable level of sustainability across its associated security mechanisms. This label, which ranges from A to G, serves as a benchmark to ensure that all security constraints tied to the feature meet or exceed a specified standard of environmental, economic, and operational sustainability. It ensures that the security feature aligns with broader sustainability goals by aggregating the sustainability performance of its multiple constraints.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/ASustainabilityLabel</IRI>
+        <Literal>Represents the highest standard of sustainability. Products or practices with this label are considered to have the lowest environmental impact and highest efficiency and sustainability in their category.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/BSustainabilityLabel</IRI>
+        <Literal>Denotes a high level of sustainability, second only to A. Products or practices labeled B are highly sustainable with minor areas for improvement compared to A.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/CSustainabilityLabel</IRI>
+        <Literal>Reflects a moderate level of sustainability. C labeled entities offer a balanced sustainability performance but with significant room for improvement to reach higher standards.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/DSustainabilityLabel</IRI>
+        <Literal>Indicates a sustainability performance that is below average, with D being more sustainable than E, F, and G but less so than C, B, and A. As the labels progress to E, F, and G, they represent decreasing levels of sustainability, indicating increasing environmental impacts and lower efficiency.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/ESustainabilityLabel</IRI>
+        <Literal>Signifies a lower level of sustainability, indicating a need for significant improvements. Products or practices with an E label have a notable environmental impact and efficiency issues. This label suggests that while some sustainability measures may be in place, there are considerable areas for improvement to move towards a more sustainable outcome.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/FSustainabilityLabel</IRI>
+        <Literal>Represents a sustainability level that is second to last, highlighting substantial environmental impacts and a lack of efficiency. F labeled entities require major changes and enhancements in their sustainability practices and operations to reduce their negative environmental footprint.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/GSustainabilityLabel</IRI>
+        <Literal>Denotes the lowest level of sustainability, indicating the highest environmental impact and the least efficient use of resources. Entities with a G label are considered the least sustainable, underscoring an urgent need for comprehensive measures to significantly improve their sustainability performance.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/SustainabilityLabel</IRI>
+        <Literal>Represents the sustainability performance of various entities, including devices, security mechanisms, and other products, across their lifecycle or operational practices. Labels range from A (most sustainable) to G (least sustainable), providing a clear and standardized measure of environmental impact, resource efficiency, and overall sustainability.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isLessSustainableThan</IRI>
+        <Literal>Indicates that one sustainability label denotes a lower level of sustainability compared to another. This hierarchical relationship helps in understanding and comparing the sustainability performance across different labels.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>/isMoreSustainableThan</IRI>
+        <Literal>Indicates that one sustainability label represents a higher level of sustainability compared to another. It establishes a hierarchy among labels, facilitating comparison and decision-making based on sustainability criteria.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

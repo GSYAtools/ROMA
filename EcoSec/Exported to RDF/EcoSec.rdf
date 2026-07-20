@@ -1,0 +1,722 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:ecosec="https://gsya.esi.uclm.es/ecosec#"
+     xmlns:ecosec1="https://gsya.esi.uclm.es/ecosec/"
+     xmlns:ontocarmen="https://gsya.esi.uclm.es/ontocarmen#">
+    <Ontology rdf:about="https://gsya.esi.uclm.es/ecosec">
+        <imports rdf:resource="https://gsya.esi.uclm.es/ontocarmen"/>
+        <rdfs:comment>EcoSec is a comprehensive sustainability ontology designed to systematically assess and label the sustainability impact of security mechanisms and devices across their lifecycle or operational scope. By assigning sustainability labels ranging from A (most sustainable) to G (least sustainable), EcoSec provides a nuanced framework for evaluating the environmental and operational sustainability of various elements. 
+For security mechanisms, EcoSec assesses key aspects such as adoption, maintenance, and efficiency to understand their sustainability footprint.
+ In the context of devices, the ontology adopts a lifecycle approach, meticulously evaluating the sustainability performance at each stage (from raw material sourcing, manufacturing, and packaging, to transport, usage, spare parts availability, and end-of-life management).</rdfs:comment>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#deviceHasEndOfLifeSustainabilityLabel -->
+
+    <ObjectProperty rdf:about="https://gsya.esi.uclm.es/ecosec#deviceHasEndOfLifeSustainabilityLabel">
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/ontocarmen/Device"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+        <rdfs:comment>Associates a device with a sustainability label for end-of-life management, focusing on recyclability, return programs, and reusability. Assesses the ease of device disassembly and material sorting, initiatives for device return to manufacturers or recycling points, and the potential for component or entire device reuse.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#deviceHasManufactureSustainabilityLabel -->
+
+    <ObjectProperty rdf:about="https://gsya.esi.uclm.es/ecosec#deviceHasManufactureSustainabilityLabel">
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/ontocarmen/Device"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+        <rdfs:comment>Links a device to a sustainability label for its manufacturing stage, considering CO2 emissions, water consumption, renewable energy usage, and waste treatment. Factors assessed include CO2 equivalent emissions, water usage efficiency, the percentage of renewable energy in manufacturing processes, and the effectiveness of production waste recycling and disposal.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#deviceHasPackagingSustainabilityLabel -->
+
+    <ObjectProperty rdf:about="https://gsya.esi.uclm.es/ecosec#deviceHasPackagingSustainabilityLabel">
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/ontocarmen/Device"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+        <rdfs:comment>Connects a device to a sustainability label for packaging, focusing on material types, efficiency, and sustainability information. Evaluates the use of recyclable, biodegradable, and reusable materials, optimization of packaging design to reduce waste, and the presence of labeling with recycling and disposal guidelines.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#deviceHasRawMaterialSustainabilityLabel -->
+
+    <ObjectProperty rdf:about="https://gsya.esi.uclm.es/ecosec#deviceHasRawMaterialSustainabilityLabel">
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/ontocarmen/Device"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+        <rdfs:comment>Associates a device with a sustainability label for the raw materials stage, evaluating material origin, extraction impacts, efficiency, recycled content, and compliance with hazardous substance regulations. This comprehensive assessment covers types of materials (recycled, renewable, conflict-free), environmental and social impacts of extraction, material usage efficiency, percentage of recycled materials, and adherence to standards like RoHS and REACH.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#deviceHasSparePartsSustainabilityLabel -->
+
+    <ObjectProperty rdf:about="https://gsya.esi.uclm.es/ecosec#deviceHasSparePartsSustainabilityLabel">
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/ontocarmen/Device"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+        <rdfs:comment>Connects a device to a sustainability label for spare parts, evaluating availability, compatibility, and sustainability. Addresses ease of access to spare parts, their compatibility across different sources or models, and the environmental impact of materials and manufacturing processes for spare parts.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#deviceHasSustainabilityLabel -->
+
+    <ObjectProperty rdf:about="https://gsya.esi.uclm.es/ecosec#deviceHasSustainabilityLabel">
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/ontocarmen/Device"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+        <rdfs:comment>Associates a device with its overall sustainability label, calculated based on the sustainability labels of each stage in the device&apos;s lifecycle, including raw material acquisition, manufacture, packaging, transport, usage, spare parts, and end of life. This comprehensive label, ranging from A to G, encapsulates the device&apos;s total environmental impact, reflecting a holistic assessment of its sustainability performance across all lifecycle stages.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#deviceHasTransportSustainabilityLabel -->
+
+    <ObjectProperty rdf:about="https://gsya.esi.uclm.es/ecosec#deviceHasTransportSustainabilityLabel">
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/ontocarmen/Device"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+        <rdfs:comment>Associates a device with a sustainability label for transport, assessing transport mode efficiency, logistics optimization, and transport packaging. Considers the efficiency of air, sea, and land transportation, measures to reduce transportation distances and consolidate shipments, and efforts to minimize volume and weight for transport efficiency.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#deviceHasUsageSustainabilityLabel -->
+
+    <ObjectProperty rdf:about="https://gsya.esi.uclm.es/ecosec#deviceHasUsageSustainabilityLabel">
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/ontocarmen/Device"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+        <rdfs:comment>Links a device to a sustainability label for usage, covering energy efficiency, durability, repairability, and software updates. Reviews energy consumption, physical resistance, estimated lifespan, ease of repair, spare parts availability, and the impact of long-term software support on functionality and efficiency.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#securityConstraintHasAdoptionSustainabilityLabel -->
+
+    <ObjectProperty rdf:about="https://gsya.esi.uclm.es/ecosec#securityConstraintHasAdoptionSustainabilityLabel">
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/ontocarmen/SecurityConstraint"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+        <rdfs:comment>Associates a security mechanism with its adoption label, reflecting the extent to which the technology has been accepted and adopted within the industry. This label, ranging from A to G, indicates the mechanism&apos;s prevalence and popularity among users and developers, providing insight into its widespread or limited adoption. The adoption label is a sustainability label, categorizing the mechanism&apos;s environmental and operational sustainability in terms of its adoption.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#securityConstraintHasEfficiencySustainabilityLabel -->
+
+    <ObjectProperty rdf:about="https://gsya.esi.uclm.es/ecosec#securityConstraintHasEfficiencySustainabilityLabel">
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/ontocarmen/SecurityConstraint"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+        <rdfs:comment>Links a security mechanism to its efficiency label, indicating the resource effectiveness and performance of the technology in operational environments. This label, which ranges from A to G, evaluates the mechanism&apos;s sustainability by measuring its computational efficiency, energy consumption, and the optimization of resources required for its functionality. The efficiency label is a sustainability label that underscores the environmental and economic impact of deploying and operating the security mechanism.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#securityConstraintHasMaintenanceSustainabilityLabel -->
+
+    <ObjectProperty rdf:about="https://gsya.esi.uclm.es/ecosec#securityConstraintHasMaintenanceSustainabilityLabel">
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/ontocarmen/SecurityConstraint"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+        <rdfs:comment>Connects a security mechanism to its maintenance label, which quantifies the effort and resources required to keep the technology secure and up-to-date over time. This label, ranging from A to G, assesses the mechanism&apos;s sustainability in terms of ongoing support, frequency of updates needed, and overall lifecycle management. The maintenance label is a sustainability label that highlights the operational efficiency and long-term viability of the security mechanism.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#securityConstraintHasSustainabilityLabel -->
+
+    <ObjectProperty rdf:about="https://gsya.esi.uclm.es/ecosec#securityConstraintHasSustainabilityLabel">
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/ontocarmen/SecurityConstraint"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+        <rdfs:comment>Associates a security mechanism with its overall sustainability label, which represents a comprehensive evaluation of the mechanism&apos;s sustainability across three key dimensions: adoption, maintenance, and efficiency. This label, ranging from A to G, is calculated based on the combined assessments of the mechanism&apos;s adoption label, maintenance label, and efficiency label. The overall sustainability label provides a holistic view of the environmental, economic, and operational sustainability of the security mechanism, reflecting its long-term viability and impact.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#securityFeatureHasSustainabilityLabel -->
+
+    <ObjectProperty rdf:about="https://gsya.esi.uclm.es/ecosec#securityFeatureHasSustainabilityLabel">
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/ontocarmen/SecurityFeature"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+        <rdfs:comment>Connects a security feature to a minimum sustainability label requirement, indicating the lowest acceptable level of sustainability across its associated security mechanisms. This label, which ranges from A to G, serves as a benchmark to ensure that all security constraints tied to the feature meet or exceed a specified standard of environmental, economic, and operational sustainability. It ensures that the security feature aligns with broader sustainability goals by aggregating the sustainability performance of its multiple constraints.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec/isLessSustainableThan -->
+
+    <ObjectProperty rdf:about="https://gsya.esi.uclm.es/ecosec/isLessSustainableThan">
+        <inverseOf rdf:resource="https://gsya.esi.uclm.es/ecosec/isMoreSustainableThan"/>
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+        <rdfs:comment>Indicates that one sustainability label denotes a lower level of sustainability compared to another. This hierarchical relationship helps in understanding and comparing the sustainability performance across different labels.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec/isMoreSustainableThan -->
+
+    <ObjectProperty rdf:about="https://gsya.esi.uclm.es/ecosec/isMoreSustainableThan">
+        <rdfs:domain rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+        <rdfs:range rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+        <rdfs:comment>Indicates that one sustainability label represents a higher level of sustainability compared to another. It establishes a hierarchy among labels, facilitating comparison and decision-making based on sustainability criteria.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec/SustainabilityLabel -->
+
+    <Class rdf:about="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel">
+        <equivalentClass>
+            <Class>
+                <oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://gsya.esi.uclm.es/ecosec/ASustainabilityLabel"/>
+                    <rdf:Description rdf:about="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+                    <rdf:Description rdf:about="https://gsya.esi.uclm.es/ecosec/CSustainabilityLabel"/>
+                    <rdf:Description rdf:about="https://gsya.esi.uclm.es/ecosec/DSustainabilityLabel"/>
+                    <rdf:Description rdf:about="https://gsya.esi.uclm.es/ecosec/ESustainabilityLabel"/>
+                    <rdf:Description rdf:about="https://gsya.esi.uclm.es/ecosec/FSustainabilityLabel"/>
+                    <rdf:Description rdf:about="https://gsya.esi.uclm.es/ecosec/GSustainabilityLabel"/>
+                </oneOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:comment>Represents the sustainability performance of various entities, including devices, security mechanisms, and other products, across their lifecycle or operational practices. Labels range from A (most sustainable) to G (least sustainable), providing a clear and standardized measure of environmental impact, resource efficiency, and overall sustainability.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ontocarmen/Device -->
+
+    <rdf:Description rdf:about="https://gsya.esi.uclm.es/ontocarmen/Device">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="https://gsya.esi.uclm.es/ecosec#deviceHasEndOfLifeSustainabilityLabel"/>
+                <maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</maxQualifiedCardinality>
+                <onClass rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="https://gsya.esi.uclm.es/ecosec#deviceHasManufactureSustainabilityLabel"/>
+                <maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</maxQualifiedCardinality>
+                <onClass rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="https://gsya.esi.uclm.es/ecosec#deviceHasPackagingSustainabilityLabel"/>
+                <maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</maxQualifiedCardinality>
+                <onClass rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="https://gsya.esi.uclm.es/ecosec#deviceHasRawMaterialSustainabilityLabel"/>
+                <maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</maxQualifiedCardinality>
+                <onClass rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="https://gsya.esi.uclm.es/ecosec#deviceHasSparePartsSustainabilityLabel"/>
+                <maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</maxQualifiedCardinality>
+                <onClass rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="https://gsya.esi.uclm.es/ecosec#deviceHasSustainabilityLabel"/>
+                <maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</maxQualifiedCardinality>
+                <onClass rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="https://gsya.esi.uclm.es/ecosec#deviceHasTransportSustainabilityLabel"/>
+                <maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</maxQualifiedCardinality>
+                <onClass rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="https://gsya.esi.uclm.es/ecosec#deviceHasUsageSustainabilityLabel"/>
+                <maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</maxQualifiedCardinality>
+                <onClass rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ontocarmen/SecurityConstraint -->
+
+    <rdf:Description rdf:about="https://gsya.esi.uclm.es/ontocarmen/SecurityConstraint">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="https://gsya.esi.uclm.es/ecosec#securityConstraintHasAdoptionSustainabilityLabel"/>
+                <maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</maxQualifiedCardinality>
+                <onClass rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="https://gsya.esi.uclm.es/ecosec#securityConstraintHasEfficiencySustainabilityLabel"/>
+                <maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</maxQualifiedCardinality>
+                <onClass rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="https://gsya.esi.uclm.es/ecosec#securityConstraintHasMaintenanceSustainabilityLabel"/>
+                <maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</maxQualifiedCardinality>
+                <onClass rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="https://gsya.esi.uclm.es/ecosec#securityConstraintHasSustainabilityLabel"/>
+                <maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</maxCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ontocarmen/SecurityFeature -->
+
+    <rdf:Description rdf:about="https://gsya.esi.uclm.es/ontocarmen/SecurityFeature">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="https://gsya.esi.uclm.es/ecosec#securityFeatureHasSustainabilityLabel"/>
+                <maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</maxQualifiedCardinality>
+                <onClass rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#AES128GCMCipherIndividual -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec#AES128GCMCipherIndividual">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/ontocarmen#AES128GCMCipher"/>
+        <ecosec:securityConstraintHasAdoptionSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/ASustainabilityLabel"/>
+        <ecosec:securityConstraintHasEfficiencySustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/ASustainabilityLabel"/>
+        <ecosec:securityConstraintHasMaintenanceSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/ASustainabilityLabel"/>
+        <ecosec:securityConstraintHasSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/ASustainabilityLabel"/>
+        <rdfs:comment>Marked by its efficiency and broad adoption, the AES-128-GCM Cipher achieves &apos;A&apos; ratings, highlighting its role as a sustainable cipher choice.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#CamelliaCipherIndividual -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec#CamelliaCipherIndividual">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/ontocarmen#CamelliaCipher"/>
+        <ecosec:securityConstraintHasAdoptionSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/CSustainabilityLabel"/>
+        <ecosec:securityConstraintHasEfficiencySustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+        <ecosec:securityConstraintHasMaintenanceSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/CSustainabilityLabel"/>
+        <ecosec:securityConstraintHasSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/CSustainabilityLabel"/>
+        <rdfs:comment>Though efficient, the Camellia Cipher&apos;s lower adoption and moderate maintenance requirements reflect its &apos;C&apos; sustainability label, with room for broader acceptance.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#ChaCha20CipherIndividual -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec#ChaCha20CipherIndividual">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/ontocarmen#ChaCha20Cipher"/>
+        <ecosec:securityConstraintHasAdoptionSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+        <ecosec:securityConstraintHasEfficiencySustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+        <ecosec:securityConstraintHasMaintenanceSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+        <ecosec:securityConstraintHasSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+        <rdfs:comment>The ChaCha20 Cipher&apos;s good efficiency, particularly on mobile devices, secures it &apos;B&apos; ratings, standing out for its performance and sustainable security approach.&quot;</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#HTTPSChannelIndividual -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec#HTTPSChannelIndividual">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/ontocarmen#HTTPSChannel"/>
+        <ecosec:securityConstraintHasAdoptionSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/ASustainabilityLabel"/>
+        <ecosec:securityConstraintHasEfficiencySustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/ASustainabilityLabel"/>
+        <ecosec:securityConstraintHasMaintenanceSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/ASustainabilityLabel"/>
+        <ecosec:securityConstraintHasSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/ASustainabilityLabel"/>
+        <rdfs:comment>The universality and efficiency in the implementation of the HTTPS Channel secure it an &apos;A&apos; rating across the board, showcasing optimal sustainability in secure communications.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#MultiFactorPasswordIndividual -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec#MultiFactorPasswordIndividual">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/ontocarmen#MultiFactorPassword"/>
+        <ecosec:securityConstraintHasAdoptionSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/ASustainabilityLabel"/>
+        <ecosec:securityConstraintHasEfficiencySustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/ASustainabilityLabel"/>
+        <ecosec:securityConstraintHasMaintenanceSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/ASustainabilityLabel"/>
+        <ecosec:securityConstraintHasSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/ASustainabilityLabel"/>
+        <rdfs:comment>Greater security and a reduced frequency of changes earn the Multi-Factor Password an &apos;A&apos; rating in all categories, underscoring its exceptional sustainability in safeguarding access.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#OpenPGPCertificateIndividual -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec#OpenPGPCertificateIndividual">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/ontocarmen#OpenPGPCertificate"/>
+        <ecosec:securityConstraintHasAdoptionSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/CSustainabilityLabel"/>
+        <ecosec:securityConstraintHasEfficiencySustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/CSustainabilityLabel"/>
+        <ecosec:securityConstraintHasMaintenanceSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/CSustainabilityLabel"/>
+        <ecosec:securityConstraintHasSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/CSustainabilityLabel"/>
+        <rdfs:comment>This security mechanism is universal in its application but entails some complexity, which moderately impacts its overall sustainability rating. Its universality is tempered by complexities that moderate its efficiency, maintenance, and adoption scores, reflecting a balanced sustainability performance.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#OpenSSLCertificateIndividual -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec#OpenSSLCertificateIndividual">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/ontocarmen#OpenSSLCertificate"/>
+        <ecosec:securityConstraintHasAdoptionSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+        <ecosec:securityConstraintHasEfficiencySustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+        <ecosec:securityConstraintHasMaintenanceSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+        <ecosec:securityConstraintHasSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+        <rdfs:comment>Efficiency and compatibility drive the OpenSSL Certificate to a &apos;B&apos; sustainability rating across all aspects. It demonstrates high efficiency and broad compatibility, making it a sustainable choice for security implementations.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#PSKSignatureIndividual -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec#PSKSignatureIndividual">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/ontocarmen#PSKSignature"/>
+        <ecosec:securityConstraintHasAdoptionSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/CSustainabilityLabel"/>
+        <ecosec:securityConstraintHasEfficiencySustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/CSustainabilityLabel"/>
+        <ecosec:securityConstraintHasMaintenanceSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/CSustainabilityLabel"/>
+        <ecosec:securityConstraintHasSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/CSustainabilityLabel"/>
+        <rdfs:comment>The PSK Signature&apos;s niche application and specific use result in &apos;C&apos; sustainability ratings, indicating moderate sustainability performance.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#SAMLCertificateIndividual -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec#SAMLCertificateIndividual">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/ontocarmen#SAMLCertificate"/>
+        <ecosec:securityConstraintHasAdoptionSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/DSustainabilityLabel"/>
+        <ecosec:securityConstraintHasEfficiencySustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/CSustainabilityLabel"/>
+        <ecosec:securityConstraintHasMaintenanceSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/CSustainabilityLabel"/>
+        <ecosec:securityConstraintHasSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/DSustainabilityLabel"/>
+        <rdfs:comment>The SAML Certificate is specific to certain use cases and requires consistent maintenance, impacting its sustainability. Its lower adoption score reflects niche application areas and greater maintenance demands.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#SHA2SecureHashingIndividual -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec#SHA2SecureHashingIndividual">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/ontocarmen#SHA2SecureHashing"/>
+        <ecosec:securityConstraintHasAdoptionSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+        <ecosec:securityConstraintHasEfficiencySustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+        <ecosec:securityConstraintHasMaintenanceSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+        <ecosec:securityConstraintHasSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+        <rdfs:comment>Widely adopted yet transitioning towards SHA-3, SHA-2 Secure Hashing maintains &apos;B&apos; ratings, reflecting its current relevance and sustainability in secure hashing.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#SHA3SecureHashingIndividual -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec#SHA3SecureHashingIndividual">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/ontocarmen#SHA3SecureHashing"/>
+        <ecosec:securityConstraintHasAdoptionSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/ASustainabilityLabel"/>
+        <ecosec:securityConstraintHasEfficiencySustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/ASustainabilityLabel"/>
+        <ecosec:securityConstraintHasMaintenanceSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/ASustainabilityLabel"/>
+        <ecosec:securityConstraintHasSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/ASustainabilityLabel"/>
+        <rdfs:comment>The new, efficient design of SHA-3 Secure Hashing designed for longevity secures it an &apos;A&apos; rating across all categories, marking it as a highly sustainable choice for secure hashing.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#SR1-BLEProtocol -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec#SR1-BLEProtocol"/>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#SRPSignatureIndividual -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec#SRPSignatureIndividual">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/ontocarmen#SRPSignature"/>
+        <ecosec:securityConstraintHasAdoptionSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+        <ecosec:securityConstraintHasEfficiencySustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+        <ecosec:securityConstraintHasMaintenanceSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+        <ecosec:securityConstraintHasSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+        <rdfs:comment>Balancing efficiency with security, the SRP Signature achieves &apos;B&apos; ratings, demonstrating its sustainable application in secure signature processes.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#SSLTLSChannelIndividual -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec#SSLTLSChannelIndividual">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/ontocarmen#SSLTLSChannel"/>
+        <ecosec:securityConstraintHasAdoptionSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+        <ecosec:securityConstraintHasEfficiencySustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+        <ecosec:securityConstraintHasMaintenanceSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+        <ecosec:securityConstraintHasSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+        <rdfs:comment>As the foundational technology for HTTPS, the SSL/TLS Channel exhibits high efficiency and broad version support, justifying its &apos;B&apos; sustainability ratings.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#StrongPasswordIndividual -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec#StrongPasswordIndividual">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/ontocarmen#StrongPassword"/>
+        <ecosec:securityConstraintHasAdoptionSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+        <ecosec:securityConstraintHasEfficiencySustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+        <ecosec:securityConstraintHasMaintenanceSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+        <ecosec:securityConstraintHasSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+        <rdfs:comment>The Strong Password balances security and usability well, achieving &apos;B&apos; sustainability ratings. It represents a solid choice for secure yet user-friendly access controls.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#TunnelingChannelIndividual -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec#TunnelingChannelIndividual">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/ontocarmen#TunnelingChannel"/>
+        <ecosec:securityConstraintHasAdoptionSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/CSustainabilityLabel"/>
+        <ecosec:securityConstraintHasEfficiencySustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/CSustainabilityLabel"/>
+        <ecosec:securityConstraintHasMaintenanceSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/CSustainabilityLabel"/>
+        <ecosec:securityConstraintHasSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/CSustainabilityLabel"/>
+        <rdfs:comment>The Tunneling Channel&apos;s sustainability is moderated by its type-dependent resource requirements, resulting in &apos;C&apos; ratings across efficiency, maintenance, and adoption.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#WeakPasswordIndividual -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec#WeakPasswordIndividual">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/ontocarmen#WeakPassword"/>
+        <ecosec:securityConstraintHasAdoptionSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/DSustainabilityLabel"/>
+        <ecosec:securityConstraintHasEfficiencySustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/DSustainabilityLabel"/>
+        <ecosec:securityConstraintHasMaintenanceSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/DSustainabilityLabel"/>
+        <ecosec:securityConstraintHasSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/GSustainabilityLabel"/>
+        <rdfs:comment>The frequent need for changes due to security vulnerabilities places the Weak Password at a &apos;G&apos; sustainability rating, highlighting significant sustainability concerns.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec#X509CertificateIndividual -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec#X509CertificateIndividual">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/ontocarmen#X509Certificate"/>
+        <ecosec:securityConstraintHasAdoptionSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/ASustainabilityLabel"/>
+        <ecosec:securityConstraintHasEfficiencySustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/ASustainabilityLabel"/>
+        <ecosec:securityConstraintHasMaintenanceSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/ASustainabilityLabel"/>
+        <ecosec:securityConstraintHasSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/ASustainabilityLabel"/>
+        <rdfs:comment>Broad adoption and interoperability grant the X.509 Certificate an &apos;A&apos; rating in all sustainability categories. Its widespread acceptance and efficiency make it an exemplary model of sustainable security practice.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec/ASustainabilityLabel -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec/ASustainabilityLabel">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+        <ecosec1:isMoreSustainableThan rdf:resource="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+        <rdfs:comment>Represents the highest standard of sustainability. Products or practices with this label are considered to have the lowest environmental impact and highest efficiency and sustainability in their category.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+        <ecosec1:isLessSustainableThan rdf:resource="https://gsya.esi.uclm.es/ecosec/ASustainabilityLabel"/>
+        <ecosec1:isMoreSustainableThan rdf:resource="https://gsya.esi.uclm.es/ecosec/CSustainabilityLabel"/>
+        <rdfs:comment>Denotes a high level of sustainability, second only to A. Products or practices labeled B are highly sustainable with minor areas for improvement compared to A.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec/CSustainabilityLabel -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec/CSustainabilityLabel">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+        <ecosec1:isLessSustainableThan rdf:resource="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+        <ecosec1:isMoreSustainableThan rdf:resource="https://gsya.esi.uclm.es/ecosec/DSustainabilityLabel"/>
+        <rdfs:comment>Reflects a moderate level of sustainability. C labeled entities offer a balanced sustainability performance but with significant room for improvement to reach higher standards.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec/DSustainabilityLabel -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec/DSustainabilityLabel">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+        <ecosec1:isLessSustainableThan rdf:resource="https://gsya.esi.uclm.es/ecosec/CSustainabilityLabel"/>
+        <ecosec1:isMoreSustainableThan rdf:resource="https://gsya.esi.uclm.es/ecosec/ESustainabilityLabel"/>
+        <rdfs:comment>Indicates a sustainability performance that is below average, with D being more sustainable than E, F, and G but less so than C, B, and A. As the labels progress to E, F, and G, they represent decreasing levels of sustainability, indicating increasing environmental impacts and lower efficiency.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec/ESustainabilityLabel -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec/ESustainabilityLabel">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+        <ecosec1:isLessSustainableThan rdf:resource="https://gsya.esi.uclm.es/ecosec/DSustainabilityLabel"/>
+        <ecosec1:isMoreSustainableThan rdf:resource="https://gsya.esi.uclm.es/ecosec/FSustainabilityLabel"/>
+        <rdfs:comment>Signifies a lower level of sustainability, indicating a need for significant improvements. Products or practices with an E label have a notable environmental impact and efficiency issues. This label suggests that while some sustainability measures may be in place, there are considerable areas for improvement to move towards a more sustainable outcome.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec/FSustainabilityLabel -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec/FSustainabilityLabel">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+        <ecosec1:isLessSustainableThan rdf:resource="https://gsya.esi.uclm.es/ecosec/ESustainabilityLabel"/>
+        <ecosec1:isMoreSustainableThan rdf:resource="https://gsya.esi.uclm.es/ecosec/GSustainabilityLabel"/>
+        <rdfs:comment>Represents a sustainability level that is second to last, highlighting substantial environmental impacts and a lack of efficiency. F labeled entities require major changes and enhancements in their sustainability practices and operations to reduce their negative environmental footprint.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec/GSustainabilityLabel -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec/GSustainabilityLabel">
+        <rdf:type rdf:resource="https://gsya.esi.uclm.es/ecosec/SustainabilityLabel"/>
+        <ecosec1:isLessSustainableThan rdf:resource="https://gsya.esi.uclm.es/ecosec/FSustainabilityLabel"/>
+        <rdfs:comment>Denotes the lowest level of sustainability, indicating the highest environmental impact and the least efficient use of resources. Entities with a G label are considered the least sustainable, underscoring an urgent need for comprehensive measures to significantly improve their sustainability performance.</rdfs:comment>
+    </NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec/SR1-Asset-a -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec/SR1-Asset-a">
+        <ontocarmen:assetHasDevice rdf:resource="https://gsya.esi.uclm.es/ecosec/SR1-MicroController"/>
+        <ontocarmen:assetHasDevice rdf:resource="https://gsya.esi.uclm.es/ecosec/SR1-TemperatureSensor"/>
+        <ontocarmen:assetHasInfrastructure rdf:resource="https://gsya.esi.uclm.es/ecosec#SR1-BLEProtocol"/>
+        <ontocarmen:assetHasInfrastructure rdf:resource="https://gsya.esi.uclm.es/ecosec/SR1-RFIDProtocol"/>
+        <ontocarmen:assetHasInfrastructure rdf:resource="https://gsya.esi.uclm.es/ecosec/SR1-WLAN"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec/SR1-ConfidentialityProperty -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec/SR1-ConfidentialityProperty"/>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec/SR1-MicroController -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec/SR1-MicroController"/>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec/SR1-RFIDProtocol -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec/SR1-RFIDProtocol"/>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec/SR1-SecurityFeature-sf -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec/SR1-SecurityFeature-sf">
+        <ecosec:securityConstraintHasSustainabilityLabel rdf:resource="https://gsya.esi.uclm.es/ecosec/BSustainabilityLabel"/>
+        <ontocarmen:securityFeatureHasProperty rdf:resource="https://gsya.esi.uclm.es/ecosec/SR1-ConfidentialityProperty"/>
+        <ontocarmen:securityFeatureHasSecurityConstraint rdf:resource="https://gsya.esi.uclm.es/ecosec#CamelliaCipherIndividual"/>
+        <ontocarmen:securityFeatureHasSecurityConstraint rdf:resource="https://gsya.esi.uclm.es/ecosec#HTTPSChannelIndividual"/>
+        <ontocarmen:securityFeatureHasSecurityLevel rdf:resource="https://gsya.esi.uclm.es/ontocarmen/HighSecurityLevel"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec/SR1-SecurityRequirement -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec/SR1-SecurityRequirement">
+        <ontocarmen:securityRequirementHasAsset rdf:resource="https://gsya.esi.uclm.es/ecosec/SR1-Asset-a"/>
+        <ontocarmen:securityRequirementHasSecurityFeature rdf:resource="https://gsya.esi.uclm.es/ecosec/SR1-SecurityFeature-sf"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec/SR1-TemperatureSensor -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec/SR1-TemperatureSensor"/>
+    
+
+
+    <!-- https://gsya.esi.uclm.es/ecosec/SR1-WLAN -->
+
+    <NamedIndividual rdf:about="https://gsya.esi.uclm.es/ecosec/SR1-WLAN"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

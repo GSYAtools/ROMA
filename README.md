@@ -1,44 +1,59 @@
-# ROMA: Risk Ontology for MARISMA
-
+# AURORA Ontology
 
 ## Introduction
 
-ROMA is an ontology designed for MARISMA, focusing on the sustainability and management of cybersecurity risks. ROMA incorporates the concepts from the MARISMA meta-pattern and serves as a foundational ontology that can be extended with specific patterns tailored to various application domains.
+AURORA is an ontology designed for collaborative cybersecurity and sustainability risk management in IoT-based smart environments. It integrates three complementary knowledge layers:
+
+- **ROMA**, which provides the core risk management model derived from the MARISMA metapattern.
+- **EcoSec**, which incorporates sustainability assessment for devices and security mechanisms.
+- **AURORA Collaborative Layer**, which introduces distributed intelligence, event management, alert propagation, trust relationships, and federated risk monitoring across interconnected smart environments.
+
+Together, these components provide a semantic framework capable of representing not only risks, threats, assets, controls, and sustainability aspects, but also the operational processes required to detect, propagate, mitigate, and reassess cybersecurity risks in dynamic IoT ecosystems.
+
+---
 
 ## Purpose
 
-The primary purpose of ROMA is to provide a structured framework for defining and managing cybersecurity risks in a sustainable manner. It extends the core concepts of MARISMA to facilitate the creation of domain-specific ontologies for comprehensive risk management.
+The primary purpose of AURORA is to provide a unified semantic framework for:
 
-## Key Concepts
+- Cybersecurity risk management.
+- Sustainability-aware security analysis.
+- Distributed IoT monitoring.
+- Alert generation and propagation.
+- Collaborative threat intelligence sharing.
+- Risk reassessment and control validation.
 
+AURORA enables smart homes, IoT deployments, and cyber-physical environments to exchange cybersecurity knowledge while maintaining local autonomy and trust-based collaboration.
 
-![ROMA Stardog](img/ROMA-stardog.png)
+---
 
+## Architecture Overview
 
-### Meta-Pattern Concepts
-- **Characteristic**: Represents the properties or attributes of security controls.
-- **Control**: Encompasses the measures or mechanisms put in place to mitigate risks.
-- **SecurityProperty**: Defines the security attributes associated with controls.
-- **SecurityConcept**: Broadly captures the various security-related notions.
-- **SecurityDomain**: Categorizes the different areas within the security landscape.
-- **OperationalCapability**: Reflects the effectiveness and efficiency of security controls.
-- **Threat**: Identifies potential sources of harm or disruption.
-- **TypeOfThreat**: Classifies threats into specific categories.
-- **TAD (Threat, Asset, Dimension)**: Links threats with assets and their dimensions.
-- **ControlObjective**: Articulates the goals that security controls aim to achieve.
-- **Subcontrol**: Details the subcomponents of primary security controls.
-- **Asset**: Represents valuable resources that need protection.
-- **TypeOfAsset**: Categorizes assets into specific types.
-- **Domain**: Defines the scope or area of focus within the security context.
-- **Dimension**: Describes various facets or aspects related to threats and assets.
-- **Percentage**: Quantifies the degree or extent of certain characteristics or properties.
+AURORA is organized into three integrated layers:
 
-
-## Extensibility
-
-ROMA can be extended with domain-specific ontologies, allowing organizations to adapt the framework to their unique needs. Examples of possible extensions include:
-
-- **MARISMA-CPS (Cyber-Physical Systems)**: Tailored for managing cybersecurity risks in CPS environments.
-- **MARISMA-BIDA (Big Data)**: Focused on addressing risks associated with large-scale data processing and storage.
-
-
+```text
+AURORA
+│
+├── ROMA Layer
+│     ├── Assets
+│     ├── Threats
+│     ├── Risks
+│     ├── Controls
+│     ├── TAD Relations
+│     └── Security Characteristics
+│
+├── EcoSec Layer
+│     ├── Sustainability Labels
+│     ├── Sustainability Security
+│     ├── Sustainability Ratings
+│     ├── Sustainability Aspects
+│     └── Product Lifecycle Phases
+│
+└── Collaborative AURORA Layer
+      ├── CentralAurora
+      ├── LocalAurora
+      ├── Events
+      ├── Alerts
+      ├── Trust Relationships
+      ├── Alert Propagation
+      └── Risk Reassessment
