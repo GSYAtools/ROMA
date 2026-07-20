@@ -10,8 +10,6 @@ AURORA is an ontology designed for collaborative cybersecurity and sustainabilit
 
 Together, these components provide a semantic framework capable of representing not only risks, threats, assets, controls, and sustainability aspects, but also the operational processes required to detect, propagate, mitigate, and reassess cybersecurity risks in dynamic IoT ecosystems.
 
----
-
 ## Purpose
 
 The primary purpose of AURORA is to provide a unified semantic framework for:
@@ -24,8 +22,6 @@ The primary purpose of AURORA is to provide a unified semantic framework for:
 - Risk reassessment and control validation.
 
 AURORA enables smart homes, IoT deployments, and cyber-physical environments to exchange cybersecurity knowledge while maintaining local autonomy and trust-based collaboration.
-
----
 
 ## Architecture Overview
 
