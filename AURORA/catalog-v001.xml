@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="https://gsya.esi.uclm.es/ecosec" uri="EcoSec.rdf"/>
+    <uri id="Imports Wizard Entry" name="https://gsya.esi.uclm.es/roma" uri="ROMA.rdf"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1784810738544" name="http://www.semanticweb.org/blancobc/ontologies/2026/6/untitled-ontology-74/" uri="AURORA.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1784810738544" name="http://www.semanticweb.org/lhc/ontologies/2023/3/untitled-ontology-34/" uri="ROMA.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1784810738544" name="http://www.w3.org/2002/07/owl" uri="EcoSec.rdf"/>
+    </group>
+</catalog>
